@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
+  "name": "PubSub",
+  "tags": ["PubSub", "Queue", "GCP"],
+  "descriptions": {
+    "es": "Componente PubSub",
+    "en": "PubSub Component"
+  },
+  "scripts": {
+    "pre": "scripts/pre.js",
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": ["service_account.json"]
+}

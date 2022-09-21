@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/catalogrc.schema.json",
+  "name": "Curated cloud components",
+  "descriptions": {
+    "en": "A curated list for cloud components that fit very well in the Cenco X ecosystem",
+    "es": "Una lista de componentes nubes curados que funcionan perfecto en el ecosistema de Cenco X"
+  },
+  "types": ["pubsub/componentrc.json", "mongodb/componentrc.json"]
+}

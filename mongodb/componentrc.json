@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
+  "name": "MongoDB",
+  "tags": ["MongoDB", "NoSQL", "Database"],
+  "descriptions": {
+    "es": "Componente MongoDB",
+    "en": "MongoDB Component"
+  },
+  "scripts": {
+    "pre": "scripts/pre.js",
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": ["connection.json"]
+}
