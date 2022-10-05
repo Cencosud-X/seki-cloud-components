@@ -14,6 +14,6 @@
     "source": "template"
   },
   "outputs": {
-    "CONNECTION": "connection_{{identifier}}.json"
+    "CONNECTION": "connection_{{data.identifier}}.json"
   }
 }
