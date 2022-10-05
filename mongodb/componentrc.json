@@ -13,5 +13,7 @@
   "interpolations": {
     "source": "template"
   },
-  "output": ["connection.json"]
+  "outputs": {
+    "CONNECTION": "connection_{{identifier}}.json"
+  }
 }
