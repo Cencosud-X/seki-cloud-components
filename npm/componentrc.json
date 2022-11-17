@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
+  "name": "NPM",
+  "tags": ["NPM", "Pakage"],
+  "descriptions": {
+    "es": "Proveedor para paquetes NPM",
+    "en": "NPM Provider"
+  },
+  "scripts": {
+    "pre": "scripts/pre.js",
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "outputs": {
+    "NPM_TOKEN": "npm_token_{{data.identifier}}.json"
+  }
+}
