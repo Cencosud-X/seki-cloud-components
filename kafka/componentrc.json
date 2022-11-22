@@ -1,10 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
-  "name": "MongoDB",
-  "tags": ["MongoDB", "NoSQL", "Database"],
+  "name": "Kafka",
+  "tags": ["Kafka", "Queue", "Confluent"],
   "descriptions": {
-    "es": "Componente MongoDB",
-    "en": "MongoDB Component"
+    "es": "Componente Kafka",
+    "en": "Kafka Component"
   },
   "scripts": {
     "pre": "scripts/pre.js",

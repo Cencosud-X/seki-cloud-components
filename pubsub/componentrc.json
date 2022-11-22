@@ -13,7 +13,7 @@
   "interpolations": {
     "source": "template"
   },
-  "outputs": {
-    "GOOGLE_CREDENTIALS": "google_credentials_{{data.identifier}}.json"
-  }
+  "outputs": [
+    "google_credentials.json"
+  ]
 }
