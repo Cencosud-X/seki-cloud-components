@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
+  "name": "Google Bucket",
+  "tags": ["Bucket", "GCP"],
+  "descriptions": {
+    "es": "Google bucket",
+    "en": "Google bucket"
+  },
+  "scripts": {
+    "pre": "scripts/pre.js",
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "outputs": [
+    "settings.json"
+  ]
+}
