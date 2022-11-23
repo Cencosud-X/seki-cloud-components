@@ -1,10 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
   "name": "NPM",
-  "tags": ["NPM", "Pakage"],
+  "tags": ["Package"],
+  "short_descriptions": {
+    "es": "Repositorio Npm",
+    "en": "Npm repository"
+  },
   "descriptions": {
-    "es": "Proveedor para paquetes NPM",
-    "en": "NPM Provider"
+    "es": "NPM es el registro de paquetes más grande del mundo. Desarrolladores de todos los continentes lo utilizan para compartir sus packages open-source y muchas organizaciones lo utilizan para gestionar sus repositorios privados.",
+    "en": "Long descriptions..."
   },
   "scripts": {
     "pre": "scripts/pre.js",
@@ -13,7 +17,5 @@
   "interpolations": {
     "source": "template"
   },
-  "outputs": [
-    "settings.json"
-  ]
+  "output": "settings.json"
 }

@@ -1,10 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
   "name": "PubSub",
-  "tags": ["PubSub", "Queue", "GCP"],
+  "tags": ["Queue", "GCP"],
+  "short_descriptions": {
+    "es": "Cola de mensajes",
+    "en": "Message streamer"
+  },
   "descriptions": {
-    "es": "Componente PubSub",
-    "en": "PubSub Component"
+    "es": "Google PubSub te permite crear sistemas basados en colas de mensajes, con la escalabilidad de la insfraestructura de Google.",
+    "en": "Long descriptions..."
   },
   "scripts": {
     "pre": "scripts/pre.js",
@@ -13,7 +17,5 @@
   "interpolations": {
     "source": "template"
   },
-  "outputs": [
-    "google_credentials.json"
-  ]
+  "output": "settings.json"
 }

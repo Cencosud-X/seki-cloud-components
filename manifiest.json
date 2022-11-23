@@ -8,8 +8,8 @@
   "types": [
     "google_bucket/componentrc.json", 
     "kafka/componentrc.json", 
-    "pubsub/componentrc.json", 
     "mongodb/componentrc.json", 
-    "npm/componentrc.json"
+    "npm/componentrc.json",
+    "pubsub/componentrc.json"
   ]
 }

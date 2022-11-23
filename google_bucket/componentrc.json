@@ -2,9 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
   "name": "Google Bucket",
   "tags": ["Bucket", "GCP"],
+  "short_descriptions": {
+    "es": "Almacenamiento",
+    "en": "Storage"
+  },
   "descriptions": {
-    "es": "Google bucket",
-    "en": "Google bucket"
+    "es": "Cloud Storage es un servicio para almacenar tus objetos en Google Cloud. Un objeto es un dato inmutable que consta de un archivo de cualquier formato",
+    "en": "Long description...."
   },
   "scripts": {
     "pre": "scripts/pre.js",
@@ -13,7 +17,5 @@
   "interpolations": {
     "source": "template"
   },
-  "outputs": [
-    "settings.json"
-  ]
+  "output": "settings.json"
 }
