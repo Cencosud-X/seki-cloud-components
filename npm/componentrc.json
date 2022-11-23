@@ -2,6 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
   "name": "NPM",
   "tags": ["Package"],
+  "icons": {
+    "light": "icons/icon.svg",
+    "dark": "icons/icon.svg"
+  },
   "short_descriptions": {
     "es": "Repositorio Npm",
     "en": "Npm repository"

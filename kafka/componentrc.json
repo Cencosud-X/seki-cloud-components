@@ -2,6 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
   "name": "Kafka",
   "tags": ["Queue", "Confluent"],
+  "icons": {
+    "light": "icons/icon.svg",
+    "dark": "icons/icon.svg"
+  },
   "short_descriptions": {
     "es": "Cola de mensajes",
     "en": "Message streamer"
