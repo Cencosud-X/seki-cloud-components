@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/componentrc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "MongoDB",
   "kind": "mongodb",
   "tags": ["NoSQL", "Database"],

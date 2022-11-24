@@ -28,7 +28,7 @@
       }
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/types/base.schema.json"
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
     }
   ]
 }

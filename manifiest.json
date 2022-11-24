@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/components/catalogrc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/manifiestrc.schema.json",
   "name": "Curated cloud components",
   "descriptions": {
     "en": "A curated list for cloud components that fit very well in the Cenco X ecosystem",
