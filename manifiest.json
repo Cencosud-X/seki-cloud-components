@@ -10,6 +10,7 @@
     "kafka/componentrc.json", 
     "mongodb/componentrc.json", 
     "npm/componentrc.json",
-    "pubsub/componentrc.json"
+    "pubsub/componentrc.json",
+    "redis/componentrc.json"
   ]
 }
