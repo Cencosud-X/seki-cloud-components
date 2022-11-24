@@ -1,6 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/manifiestrc.schema.json",
   "name": "Curated cloud components",
+  "author": {
+    "github_user": "dmunozgaete",
+    "name": "Team Seki"
+  },
   "descriptions": {
     "en": "A curated list for cloud components that fit very well in the Cenco X ecosystem",
     "es": "Una lista de componentes nubes curados que funcionan perfecto en el ecosistema de Cenco X"
@@ -9,6 +13,6 @@
     "google_bucket/componentrc.json", 
     "kafka/componentrc.json", 
     "pubsub/componentrc.json",
-    "npm/componentrc.json",
+    "npm/componentrc.json"
   ]
 }
