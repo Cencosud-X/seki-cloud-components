@@ -11,6 +11,7 @@
     "mongodb/componentrc.json", 
     "npm/componentrc.json",
     "pubsub/componentrc.json",
-    "redis/componentrc.json"
+    "redis/componentrc.json",
+    "elastic/componentrc.json"
   ]
 }

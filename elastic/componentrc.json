@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Elastic",
+  "kind": "elastic",
+  "tags": ["Database", "Memory"],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Base de datos NoSQL",
+    "en": "NoSQL database"
+  },
+  "descriptions": {
+    "es": "Elastic es un motor de búsqueda con capacidades analíticas que permite procesar grandes volúmenes de datos en tiempo real. Es una tecnología de código abierto que se adapta a las necesidades de cada proyecto.",
+    "en": "Long description...."
+  },
+  "scripts": {
+    "pre": "scripts/pre.js",
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}
