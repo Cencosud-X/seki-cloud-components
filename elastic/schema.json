@@ -6,12 +6,12 @@
         "kind": {
           "type": "string",
           "description": "Cloud component type",
-          "enum": ["redis"],
+          "enum": ["elastic"],
           "readOnly": true
         },
         "properties": {
           "type": "object",
-          "description": "Redis properties",
+          "description": "Elastic properties",
           "properties": {
           }
         }
