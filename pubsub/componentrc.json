@@ -2,7 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "PubSub",
   "kind": "pubsub",
-  "tags": ["Queue", "GCP"],
+  "tags": [
+    "Queue",
+    "GCP"
+  ],
   "icons": {
     "light": "icons/icon.svg",
     "dark": "icons/icon.svg"

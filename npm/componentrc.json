@@ -2,7 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "NPM",
   "kind": "npm",
-  "tags": ["Package"],
+  "tags": [
+    "Package"
+  ],
   "icons": {
     "light": "icons/icon.svg",
     "dark": "icons/icon.svg"

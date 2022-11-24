@@ -6,11 +6,13 @@
         "kind": {
           "type": "string",
           "description": "Cloud component type",
-          "enum": ["npm"],
+          "enum": [
+            "npm"
+          ],
           "readOnly": true
         },
         "properties": {
-          "type":"object",
+          "type": "object",
           "default": {}
         }
       }

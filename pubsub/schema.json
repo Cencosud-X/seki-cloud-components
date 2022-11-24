@@ -6,12 +6,16 @@
         "kind": {
           "type": "string",
           "description": "Cloud component type",
-          "enum": ["pubsub"],
+          "enum": [
+            "pubsub"
+          ],
           "readOnly": true
         },
         "properties": {
           "type": "object",
-          "required": ["topics"],
+          "required": [
+            "topics"
+          ],
           "description": "PubSub properties",
           "properties": {
             "topics": {
@@ -22,7 +26,7 @@
                 "type": "string",
                 "pattern": "^[a-z0-9.-]+$"
               }
-            } 
+            }
           }
         }
       }

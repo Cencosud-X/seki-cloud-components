@@ -6,12 +6,16 @@
         "kind": {
           "type": "string",
           "description": "Cloud component type",
-          "enum": ["google_bucket"],
+          "enum": [
+            "google_bucket"
+          ],
           "readOnly": true
         },
         "properties": {
           "type": "object",
-          "required": ["name"],
+          "required": [
+            "name"
+          ],
           "description": "Google bucket in GCP",
           "properties": {
             "name": {
@@ -22,7 +26,7 @@
               "type": "boolean",
               "default": false,
               "description": "Versioning of files"
-            } 
+            }
           }
         }
       }

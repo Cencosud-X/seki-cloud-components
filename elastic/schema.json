@@ -6,14 +6,15 @@
         "kind": {
           "type": "string",
           "description": "Cloud component type",
-          "enum": ["elastic"],
+          "enum": [
+            "elastic"
+          ],
           "readOnly": true
         },
         "properties": {
           "type": "object",
           "description": "Elastic properties",
-          "properties": {
-          }
+          "properties": {}
         }
       }
     },

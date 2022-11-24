@@ -2,7 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "Big Query",
   "kind": "bigquery",
-  "tags": ["Analitycs", "Warehouse"],
+  "tags": [
+    "Analitycs",
+    "Warehouse"
+  ],
   "icons": {
     "light": "icons/icon.svg",
     "dark": "icons/icon.svg"

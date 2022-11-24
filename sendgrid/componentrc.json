@@ -2,7 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "Send Grid",
   "kind": "sendgrid",
-  "tags": ["Messaging", "Email"],
+  "tags": [
+    "Messaging",
+    "Email"
+  ],
   "icons": {
     "light": "icons/icon-white.svg",
     "dark": "icons/icon.svg"

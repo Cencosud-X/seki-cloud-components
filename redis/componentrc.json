@@ -2,7 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "Redis",
   "kind": "redis",
-  "tags": ["Database", "Memory", "Key/Value"],
+  "tags": [
+    "Database",
+    "Memory",
+    "Key/Value"
+  ],
   "icons": {
     "light": "icons/icon.svg",
     "dark": "icons/icon.svg"

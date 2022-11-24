@@ -10,8 +10,8 @@
     "es": "Una lista de componentes nubes curados que funcionan perfecto en el ecosistema de Cenco X"
   },
   "types": [
-    "google_bucket/componentrc.json", 
-    "kafka/componentrc.json", 
+    "google_bucket/componentrc.json",
+    "kafka/componentrc.json",
     "pubsub/componentrc.json",
     "npm/componentrc.json"
   ]
