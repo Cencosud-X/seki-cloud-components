@@ -1,18 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
-  "name": "Redis",
-  "kind": "redis",
-  "tags": ["Database", "Memory", "Key/Value"],
+  "name": "PostgreSQL",
+  "kind": "postgress",
+  "tags": ["Database"],
   "icons": {
     "light": "icons/icon.svg",
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {
-    "es": "Base de datos en memoria",
-    "en": "Memory database"
+    "es": "Base de datos SQL",
+    "en": "SQL database"
   },
   "descriptions": {
-    "es": "Redis ofrece tiempos de respuesta inferiores al milisegundo, lo que permite que se realicen millones de solicitudes por segundo para aplicaciones en tiempo real de la industria, como videojuegos, tecnología publicitaria, servicios financieros, sanidad e IoT.",
+    "es": "PostgreSQL, también llamado Postgres, es un sistema de gestión de bases de datos relacional orientado a objetos y de código abierto.",
     "en": "Long description...."
   },
   "scripts": {

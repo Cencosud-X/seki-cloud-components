@@ -4,7 +4,7 @@
   "kind": "elastic",
   "tags": ["Database", "Memory"],
   "icons": {
-    "light": "icons/icon-white.svg",
+    "light": "icons/icon.svg",
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {

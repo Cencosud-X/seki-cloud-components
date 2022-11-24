@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Send Grid",
+  "kind": "sendgrid",
+  "tags": ["Messaging", "Email"],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Mensajería via email",
+    "en": "email messaging"
+  },
+  "descriptions": {
+    "es": "Sendgrid es un gestor de correo para desarrolladores. A través de su API, las aplicaciones y sitios en línea pueden enviar y recibir e-mails de forma masiva, lo que permite administrar correo transaccional y campañas de publicidad.",
+    "en": "Long description...."
+  },
+  "scripts": {
+    "pre": "scripts/pre.js",
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}

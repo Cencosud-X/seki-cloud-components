@@ -1,18 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
-  "name": "Redis",
-  "kind": "redis",
-  "tags": ["Database", "Memory", "Key/Value"],
+  "name": "Big Query",
+  "kind": "bigquery",
+  "tags": ["Analitycs", "Warehouse"],
   "icons": {
     "light": "icons/icon.svg",
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {
-    "es": "Base de datos en memoria",
-    "en": "Memory database"
+    "es": "Analítica avanzadaa",
+    "en": "advanced analitycs"
   },
   "descriptions": {
-    "es": "Redis ofrece tiempos de respuesta inferiores al milisegundo, lo que permite que se realicen millones de solicitudes por segundo para aplicaciones en tiempo real de la industria, como videojuegos, tecnología publicitaria, servicios financieros, sanidad e IoT.",
+    "es": "BigQuery es un almacén de datos empresarial completamente administrado que te ayuda a administrar y analizar tus datos con funciones integradas como el aprendizaje automático, el análisis geoespacial y la inteligencia empresarial",
     "en": "Long description...."
   },
   "scripts": {

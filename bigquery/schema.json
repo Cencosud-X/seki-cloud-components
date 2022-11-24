@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "kind": {
+          "type": "string",
+          "description": "Cloud component type",
+          "enum": ["bigquery"],
+          "readOnly": true
+        },
+        "properties": {
+          "type": "object",
+          "description": "Specific properties for the cloud component",
+          "properties": {
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}
