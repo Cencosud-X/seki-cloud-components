@@ -8,10 +8,7 @@
   "types": [
     "google_bucket/componentrc.json", 
     "kafka/componentrc.json", 
-    "mongodb/componentrc.json", 
-    "npm/componentrc.json",
     "pubsub/componentrc.json",
-    "redis/componentrc.json",
-    "elastic/componentrc.json"
+    "npm/componentrc.json",
   ]
 }
