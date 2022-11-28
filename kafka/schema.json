@@ -41,12 +41,14 @@
                   "partitions": {
                     "type": "number",
                     "description": "The total of partitions used by topic",
-                    "default": 6
+                    "default": 3,
+                    "maximum": 12
                   },
                   "retention": {
-                    "type": "string",
-                    "description": "The retention time in milliseconds to persist the information in topic",
-                    "default": "604800000"
+                    "type": "number",
+                    "description": "The retention time in milliseconds to persist the information in topic. Default: 1 week",
+                    "default": 604800000,
+                    "maximum": 1209600000
                   }
                 }
               }
