@@ -13,6 +13,7 @@
     "google_bucket/componentrc.json",
     "kafka/componentrc.json",
     "pubsub/componentrc.json",
-    "npm/componentrc.json"
+    "npm/componentrc.json",
+    "redis/componentrc.json"
   ]
 }
