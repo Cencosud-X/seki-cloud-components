@@ -21,10 +21,34 @@
             "topics": {
               "type": "array",
               "description": "Setup the topics that we will create in kafka",
+              "default": [
+                {
+                  "name": "write_your_topic_name_here"
+                }
+              ],
               "minItems": 1,
               "items": {
-                "type": "string",
-                "pattern": "^[a-z0-9.-]+$"
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9.-]+$",
+                    "description": "The topic name"
+                  },
+                  "partitions": {
+                    "type": "number",
+                    "description": "The total of partitions used by topic",
+                    "default": 6
+                  },
+                  "retention": {
+                    "type": "string",
+                    "description": "The retention time in milliseconds to persist the information in topic",
+                    "default": "604800000"
+                  }
+                }
               }
             }
           }
