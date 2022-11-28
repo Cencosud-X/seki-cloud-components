@@ -14,7 +14,39 @@
         "properties": {
           "type": "object",
           "description": "Redis properties",
-          "properties": {}
+          "properties": {
+            "tier": {
+              "type": "string",
+              "default": "BASIC",
+              "enum": [ "BASIC", "STANDARD_HA"],
+              "description": "The service tier of the redis instance"
+            },
+            "memory_size_gb": {
+              "type": "number",
+              "default": 1,
+              "description": "Redis memory size in GiB"
+            }
+          },
+          "if": {
+            "properties": {
+              "tier": {
+                "const": "STANDARD_HA"
+              }
+            },
+            "required": ["tier"]
+          },
+          "then": {
+            "properties": {
+              "replica_count": {
+                "type":"number",
+                "description": "The number of replicas",
+                "default": 1,
+                "minimum": 1,
+                "maximum": 4
+              }
+            },
+            "required": ["replica_count"]
+          }
         }
       }
     },
