@@ -19,14 +19,14 @@
               "type": "string",
               "default": "BASIC",
               "enum": [ "BASIC", "STANDARD_HA"],
-              "description": "The service tier of the redis instance"
+              "description": "The service tier of the redis instance. The recommend value for staging is BASIC."
             },
             "memory_size_gb": {
               "type": "number",
               "default": 1,
               "minimum": 1,
               "maximum": 10,
-              "description": "Redis memory size in GiB"
+              "description": "Redis memory size in GiB used by servers"
             }
           },
           "if": {
@@ -41,7 +41,7 @@
             "properties": {
               "replica_count": {
                 "type":"number",
-                "description": "The number of replicas",
+                "description": "The number of replicas in high availability tier",
                 "default": 1,
                 "minimum": 1,
                 "maximum": 4
@@ -68,7 +68,7 @@
                   "default": 5,
                   "minimum": 5,
                   "maximum": 10,
-                  "description": "Redis memory size in GiB"
+                  "description": "Redis memory size in GiB used by servers"
                 }
               }
             }
