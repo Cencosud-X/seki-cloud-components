@@ -20,10 +20,10 @@
           "properties": {
             "topics": {
               "type": "array",
-              "description": "Setup the topics that we will create in kafka",
+              "description": "Setup the topics that we will create in Kafka",
               "default": [
                 {
-                  "name": "write_your_topic_name_here"
+                  "name": "country.product.entity.state"
                 }
               ],
               "minItems": 1,

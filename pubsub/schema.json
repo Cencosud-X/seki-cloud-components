@@ -21,10 +21,24 @@
             "topics": {
               "type": "array",
               "description": "Setup the topics that we will create in PubSub",
+              "default": [
+                {
+                  "name": "country.product.entity.state"
+                }
+              ],
               "minItems": 1,
               "items": {
-                "type": "string",
-                "pattern": "^[a-z]{2}\\.[a-z-]+\\.[a-z]+\\.[a-z]+$"
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "pattern": "^[a-z]{2}\\.[a-z-]+\\.[a-z]+\\.[a-z]+$",
+                    "description": "The topic name"
+                  }
+                }
               }
             }
           }
