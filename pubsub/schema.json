@@ -24,7 +24,7 @@
               "minItems": 1,
               "items": {
                 "type": "string",
-                "pattern": "^[a-z0-9.-]+$"
+                "pattern": "^[a-z]{2}\\.[a-z-]+\\.[a-z]+\\.[a-z]+$"
               }
             }
           }
