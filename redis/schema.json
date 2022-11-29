@@ -43,9 +43,15 @@
                 "default": 1,
                 "minimum": 1,
                 "maximum": 4
+              },
+              "read_replicas_mode": {
+                "type":"string",
+                "enum": ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"],
+                "default": "READ_REPLICAS_DISABLED",
+                "description": "Read replicas mode"
               }
             },
-            "required": ["replica_count"]
+            "required": ["replica_count", "read_replicas_mode"]
           }
         }
       }
