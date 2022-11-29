@@ -24,6 +24,8 @@
             "memory_size_gb": {
               "type": "number",
               "default": 1,
+              "minimum": 1,
+              "maximum": 10,
               "description": "Redis memory size in GiB"
             }
           },
@@ -51,7 +53,26 @@
                 "description": "Read replicas mode"
               }
             },
-            "required": ["replica_count", "read_replicas_mode"]
+            "required": ["replica_count"],
+            "if": {
+              "properties": {
+                "read_replicas_mode": {
+                  "const": "READ_REPLICAS_ENABLED"
+                }
+              },
+              "required": ["read_replicas_mode"]
+            },
+            "then": {
+              "properties": {
+                "memory_size_gb": {
+                  "type": "number",
+                  "default": 5,
+                  "minimum": 5,
+                  "maximum": 10,
+                  "description": "Redis memory size in GiB"
+                }
+              }
+            }
           }
         }
       }
