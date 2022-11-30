@@ -32,11 +32,20 @@
                 "required": [
                   "name"
                 ],
+                "default": [
+                  {
+                    "name": "two_letters_country.product.entity.state"
+                  }
+                ],
                 "properties": {
                   "name": {
                     "type": "string",
-                    "pattern": "^[a-z]{2}\\.[a-z-]+\\.[a-z]+\\.[a-z]+$",
+                    "pattern": "^[a-z]{2}\\.[a-z0-9-]+\\.[a-z]+\\.[a-z]+$",
                     "description": "The topic name"
+                  },
+                  "exists": {
+                    "type": "boolean",
+                    "description": "Mark the topic as existed, so we dont administer that topic (it occurs when you want to use a topic from another produt)"
                   },
                   "partitions": {
                     "type": "number",
