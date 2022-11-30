@@ -23,7 +23,7 @@
               "description": "Setup the topics that we will create in PubSub",
               "default": [
                 {
-                  "name": "two_letters_country.product.entity.state"
+                  "name": "two_letters_country.product.entity.state.v1"
                 }
               ],
               "minItems": 1,
@@ -39,7 +39,7 @@
                   },
                   "name": {
                     "type": "string",
-                    "pattern": "^[a-z]{2}\\.[a-z0-9-]+\\.[a-z]+\\.[a-z]+$",
+                    "pattern": "^[a-z]{2}\\.[a-z-]+\\.[a-z]+\\.[a-z]+\\.v{1}\\d{1,2}$",
                     "description": "The topic name"
                   }
                 }
