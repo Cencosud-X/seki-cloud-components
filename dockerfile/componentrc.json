@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Dockerfile",
+  "kind": "Dockerfile",
+  "tags": [
+    "Docker",
+    "K8s",
+    "Beta"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Genera y agrega en el k8s el contenedor",
+    "en": "Build and add in the k8s cluster"
+  },
+  "descriptions": {
+    "es": "Genera y define el contenedor definido por el Dockerfile en el namespace del producto para el cluster objetivo",
+    "en": "Long description...."
+  },
+  "scripts": {
+    "pre": "scripts/pre.js",
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}

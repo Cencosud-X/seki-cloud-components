@@ -14,6 +14,7 @@
     "kafka/componentrc.json",
     "pubsub/componentrc.json",
     "npm/componentrc.json",
-    "redis/componentrc.json"
+    "redis/componentrc.json",
+    "dockerfile/componentrc.json"
   ]
 }

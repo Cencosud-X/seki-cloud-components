@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "kind": {
+          "type": "string",
+          "description": "Cloud component type",
+          "enum": [
+            "kafka"
+          ],
+          "readOnly": true
+        },
+        "properties": {
+          "type": "object",
+          "required": [
+            "topics"
+          ],
+          "description": "Kafka properties",
+          "properties": {
+            "topics": {
+              "type": "array",
+              "description": "Setup the topics that we will create in Kafka",
+              "default": [
+                {
+                  "name": "country.product.entity.state"
+                }
+              ],
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "default": [
+                  {
+                    "name": "two_letters_country.product.entity.state"
+                  }
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "pattern": "^[a-z]{2}\\.[a-z-]+\\.[a-z]+\\.[a-z]+\\.v{1}\\d{1,2}$",
+                    "description": "The topic name"
+                  },
+                  "exists": {
+                    "type": "boolean",
+                    "description": "Mark the topic as existed, so we dont administer that topic (it occurs when you want to use a topic from another produt)"
+                  },
+                  "partitions": {
+                    "type": "number",
+                    "description": "The total of partitions used by topic",
+                    "default": 3,
+                    "minimum": 1,
+                    "maximum": 12
+                  },
+                  "retention": {
+                    "type": "number",
+                    "description": "The retention time in milliseconds to persist the information in topic. Default: 1 week",
+                    "default": 604800000,
+                    "minimum": 86400000,
+                    "maximum": 1209600000
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}
