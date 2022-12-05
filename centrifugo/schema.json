@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "kind": {
+          "type": "string",
+          "description": "Cloud component type",
+          "enum": [
+            "centrifugo"
+          ],
+          "readOnly": true
+        },
+        "properties": {
+          "type": "object",
+          "description": "Centrifugo properties",
+          "properties": {
+            "max_replicas": {
+              "type": "number",
+              "description": "The max number of replicas",
+              "default": 1,
+              "minimum": 1,
+              "maximum": 4
+            }
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}

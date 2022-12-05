@@ -15,6 +15,7 @@
     "pubsub/componentrc.json",
     "npm/componentrc.json",
     "redis/componentrc.json",
-    "dockerfile/componentrc.json"
+    "dockerfile/componentrc.json",
+    "centrifugo/componentrc.json"
   ]
 }
