@@ -3,14 +3,6 @@
   "allOf": [
     {
       "properties": {
-        "kind": {
-          "type": "string",
-          "description": "Cloud component type",
-          "enum": [
-            "bigquery"
-          ],
-          "readOnly": true
-        },
         "properties": {
           "type": "object",
           "description": "Specific properties for the cloud component",

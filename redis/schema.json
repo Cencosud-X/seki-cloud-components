@@ -3,14 +3,6 @@
   "allOf": [
     {
       "properties": {
-        "kind": {
-          "type": "string",
-          "description": "Cloud component type",
-          "enum": [
-            "redis"
-          ],
-          "readOnly": true
-        },
         "properties": {
           "type": "object",
           "description": "Redis properties",

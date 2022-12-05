@@ -3,12 +3,6 @@
   "allOf": [
     {
       "properties": {
-        "kind": {
-          "type": "string",
-          "description": "Cloud component type",
-          "enum": ["postgress"],
-          "readOnly": true
-        },
         "properties": {
           "type": "object",
           "description": "Specific properties for the cloud component",

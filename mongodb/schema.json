@@ -3,12 +3,6 @@
   "allOf": [
     {
       "properties": {
-        "kind": {
-          "type": "string",
-          "description": "Cloud component type",
-          "enum": ["mongodb"],
-          "readOnly": true
-        },
         "properties": {
           "type":"object",
           "default": {}

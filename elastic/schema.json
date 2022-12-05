@@ -3,14 +3,6 @@
   "allOf": [
     {
       "properties": {
-        "kind": {
-          "type": "string",
-          "description": "Cloud component type",
-          "enum": [
-            "elastic"
-          ],
-          "readOnly": true
-        },
         "properties": {
           "type": "object",
           "description": "Elastic properties",
