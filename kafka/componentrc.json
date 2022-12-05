@@ -7,8 +7,8 @@
     "Confluent"
   ],
   "icons": {
-    "light": "icons/icon-white.svg",
-    "dark": "icons/icon.svg"
+    "light": "icons/kafka-white.svg",
+    "dark": "icons/kafka.svg"
   },
   "short_descriptions": {
     "es": "Cola de mensajes",

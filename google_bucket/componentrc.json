@@ -7,8 +7,8 @@
     "GCP"
   ],
   "icons": {
-    "light": "icons/icon.svg",
-    "dark": "icons/icon.svg"
+    "light": "icons/google_bucket-white.svg",
+    "dark": "icons/google_bucket.svg"
   },
   "short_descriptions": {
     "es": "Almacenamiento",

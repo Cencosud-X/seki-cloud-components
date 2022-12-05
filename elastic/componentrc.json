@@ -7,8 +7,8 @@
     "Memory"
   ],
   "icons": {
-    "light": "icons/icon-white.svg",
-    "dark": "icons/icon.svg"
+    "light": "icons/elastic-white.svg",
+    "dark": "icons/elastic.svg"
   },
   "short_descriptions": {
     "es": "Base de datos NoSQL",

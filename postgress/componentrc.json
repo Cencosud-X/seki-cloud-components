@@ -4,8 +4,8 @@
   "kind": "postgress",
   "tags": ["Database"],
   "icons": {
-    "light": "icons/icon.svg",
-    "dark": "icons/icon.svg"
+    "light": "icons/postgress-white.svg",
+    "dark": "icons/postgress.svg"
   },
   "short_descriptions": {
     "es": "Base de datos SQL",

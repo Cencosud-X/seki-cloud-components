@@ -7,8 +7,8 @@
     "Warehouse"
   ],
   "icons": {
-    "light": "icons/icon.svg",
-    "dark": "icons/icon.svg"
+    "light": "icons/bigquery-white.svg",
+    "dark": "icons/bigquery.svg"
   },
   "short_descriptions": {
     "es": "Analítica avanzadaa",
