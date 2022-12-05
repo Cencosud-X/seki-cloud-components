@@ -7,7 +7,7 @@
     "Memory"
   ],
   "icons": {
-    "light": "icons/icon.svg",
+    "light": "icons/icon-white.svg",
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {

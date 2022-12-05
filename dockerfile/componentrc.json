@@ -5,7 +5,7 @@
   "tags": [
     "Docker",
     "K8s",
-    "Beta"
+    "beta"
   ],
   "icons": {
     "light": "icons/icon-white.svg",

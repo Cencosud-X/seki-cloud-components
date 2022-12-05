@@ -5,7 +5,8 @@
   "tags": [
     "real-time",
     "messaging",
-    "channel"
+    "channel",
+    "experimental"
   ],
   "icons": {
     "light": "icons/icon.svg",
