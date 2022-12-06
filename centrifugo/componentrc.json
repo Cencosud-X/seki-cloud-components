@@ -9,8 +9,8 @@
     "experimental"
   ],
   "icons": {
-    "light": "icons/centrifugo-white.svg",
-    "dark": "icons/centrifugo.svg"
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
   },
   "short_descriptions": {
     "es": "Servidor de mensajería en tiempo real",

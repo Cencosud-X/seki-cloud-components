@@ -8,8 +8,8 @@
     "Key/Value"
   ],
   "icons": {
-    "light": "icons/redis-white.svg",
-    "dark": "icons/redis.svg"
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
   },
   "short_descriptions": {
     "es": "Base de datos en memoria",

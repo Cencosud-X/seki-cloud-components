@@ -4,8 +4,8 @@
   "kind": "mongodb",
   "tags": ["NoSQL", "Database"],
   "icons": {
-    "light": "icons/mongodb-white.svg",
-    "dark": "icons/mongodb.svg"
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
   },
   "short_descriptions": {
     "es": "Base de datos NoSQL",

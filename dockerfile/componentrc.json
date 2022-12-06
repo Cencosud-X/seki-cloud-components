@@ -8,8 +8,8 @@
     "beta"
   ],
   "icons": {
-    "light": "icons/dockerfile.svg",
-    "dark": "icons/dockerfile-white.svg"
+    "light": "icons/icon.svg",
+    "dark": "icons/icon-white.svg"
   },
   "short_descriptions": {
     "es": "Genera y agrega en el k8s el contenedor",

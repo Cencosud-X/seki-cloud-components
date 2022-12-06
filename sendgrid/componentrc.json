@@ -7,8 +7,8 @@
     "Email"
   ],
   "icons": {
-    "light": "icons/sendgrid-white.svg",
-    "dark": "icons/sendgrid.svg"
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
   },
   "short_descriptions": {
     "es": "Mensajería via email",

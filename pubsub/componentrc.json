@@ -7,8 +7,8 @@
     "GCP"
   ],
   "icons": {
-    "light": "icons/pubsub-white.svg",
-    "dark": "icons/pubsub.svg"
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
   },
   "short_descriptions": {
     "es": "Cola de mensajes",
