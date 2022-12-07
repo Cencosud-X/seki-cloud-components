@@ -37,7 +37,7 @@
                   },
                   "exists": {
                     "type": "boolean",
-                    "description": "Mark the topic as existed, so we dont administer that topic (it occurs when you want to use a topic from another produt)"
+                    "description": "Mark the topic as existed, so we don't administer that topic (it occurs when you want to use a topic from another product)"
                   },
                   "partitions": {
                     "type": "number",
