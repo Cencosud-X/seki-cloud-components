@@ -2,8 +2,12 @@ module.exports = async (runner, args) => {
   try {
     console.log("> Cleaning...");
 
+    await runner.execute([
+      `rm ${args.workspacePath}`
+    ])
+
     console.log("> Rollback ✅ DONE");
   } catch {
-    throw new Error("failed to rollback");
+    throw new Error("Failed to rollback");
   }
 };
