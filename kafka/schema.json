@@ -15,7 +15,7 @@
               "description": "Setup the topics that we will create in Kafka",
               "default": [
                 {
-                  "name": "country.product.entity.state"
+                  "name": "two_letters_country.product.entity.state.v1"
                 }
               ],
               "minItems": 1,
@@ -23,11 +23,6 @@
                 "type": "object",
                 "required": [
                   "name"
-                ],
-                "default": [
-                  {
-                    "name": "two_letters_country.product.entity.state"
-                  }
                 ],
                 "properties": {
                   "name": {
