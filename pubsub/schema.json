@@ -24,17 +24,52 @@
                 "required": [
                   "name"
                 ],
-                "properties": {
-                  "exists": {
-                    "type": "boolean",
-                    "description": "Mark the topic as existed, so we don't administer that topic (it occurs when you want to use a topic from another product)"
+                "allOf": [
+                  {
+                    "properties": {
+                      "exists": {
+                        "type": "boolean",
+                        "description": "Mark the topic as existed, so we don't administer that topic (it occurs when you want to use a topic from another product)"
+                      },
+                      "name": {
+                        "description": "The topic name"
+                      }
+                    }
                   },
-                  "name": {
-                    "type": "string",
-                    "pattern": "^[a-z]{2}\\.[a-z-]+\\.[a-z-]+\\.[a-z-]+\\.v{1}\\d{1,2}$",
-                    "description": "The topic name"
+                  {
+                    "if": {
+                      "properties": {
+                        "exists": {
+                          "const": true
+                        }
+                      }
+                    },
+                    "then": {
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "exists": {
+                          "const": false
+                        }
+                      }
+                    },
+                    "then": {
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "pattern": "^[a-z]{2}\\.[a-z-]+\\.[a-z-]+\\.[a-z-]+\\.v{1}\\d{1,2}$"
+                        }
+                      }
+                    }
                   }
-                }
+                ]
               }
             }
           }
