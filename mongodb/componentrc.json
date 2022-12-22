@@ -16,7 +16,8 @@
     "en": "Long descriptions..."
   },
   "scripts": {
-    "rollback": "scripts/rollback.js"
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
   },
   "interpolations": {
     "source": "template"
