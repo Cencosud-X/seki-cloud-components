@@ -16,6 +16,7 @@
     "npm/componentrc.json",
     "redis/componentrc.json",
     "dockerfile/componentrc.json",
-    "centrifugo/componentrc.json"
+    "centrifugo/componentrc.json",
+    "mongodb/componentrc.json"
   ]
 }

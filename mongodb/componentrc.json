@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "MongoDB",
   "kind": "mongodb",
-  "tags": ["NoSQL", "Database"],
+  "tags": ["NoSQL", "Database", "experimental"],
   "icons": {
     "light": "icons/icon-white.svg",
     "dark": "icons/icon.svg"
