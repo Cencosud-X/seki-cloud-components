@@ -5,6 +5,7 @@
       "properties": {
         "properties": {
           "type":"object",
+          "description": "Mongodb properties",
           "properties": {
             "cluster_type": {
               "type": "string",
@@ -36,16 +37,50 @@
               "enum": ["6.0", "5.0", "4.4", "4.2"],
               "description": "Version of the cluster to deploy"
             },
-            "provider_instance_size_name": {
-              "type": "string",
-              "default": "M10",
-              "enum": ["M10", "M20", "M30", "M40", "M50", "M60"],
-              "description": "The instance size to use for your cluster. Valid values are: M10, M20, M30, M40, M50, M60. Defaults to M10."
-            },
             "provider_backup_enabled": {
               "type": "boolean",
               "default": true,
               "description": "Whether or not to enable Atlas continuous backups for the new cluster. Defaults to true."
+            }
+          },
+          "if": {
+            "anyOf": [
+              {
+                "properties": {
+                  "cluster_type": {
+                    "const": "SHARDED"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "cluster_type": {
+                    "const": "GEOSHARDED"
+                  }
+                }
+              }
+            ],
+            "required": ["cluster_type"]
+          },
+          "then": {
+            "required": ["provider_instance_size_name"],
+            "properties": {
+              "provider_instance_size_name": {
+                "type": "string",
+                "default": "M30",
+                "enum": ["M30", "M40", "M50", "M60"],
+                "description": "The instance size to use for your cluster. Valid values are: M30, M40, M50, M60. Defaults to M30."
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "provider_instance_size_name": {
+                "type": "string",
+                "default": "M10",
+                "enum": ["M10", "M20", "M30", "M40", "M50", "M60"],
+                "description": "The instance size to use for your cluster. Valid values are: M10, M20, M30, M40, M50, M60. Defaults to M10."
+              }
             }
           }
         }
