@@ -12,9 +12,9 @@ module.exports = async (runner, args) => {
     
     console.log('> Creating settings file for local environment...');
     
-    const packageJson = JSON.parse(fs.readFileSync(path.join(productPath, 'package.json'), {encoding:'utf8'}));
+    // const packageJson = JSON.parse(fs.readFileSync(path.join(productPath, 'package.json'), {encoding:'utf8'}));
     const data = {
-      connection_strings: `mongodb://localhost:27017/${packageJson.name}_${rc.identifier}`
+      connection_string: `mongodb://localhost:27017`
     };
     fs.writeFileSync(settingsJsonPath, JSON.stringify(data, null, 2));
 
