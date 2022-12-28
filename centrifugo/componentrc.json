@@ -21,7 +21,8 @@
     "en": "Centrifugo is an open-source scalable real-time messaging server. Centrifugo can instantly deliver messages to application online users connected over supported transports (WebSocket, HTTP-streaming, SSE/EventSource, WebTransport, GRPC, SockJS)."
   },
   "scripts": {
-    "rollback": "scripts/rollback.js"
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
   },
   "interpolations": {
     "source": "template"

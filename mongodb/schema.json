@@ -6,11 +6,17 @@
         "properties": {
           "type":"object",
           "description": "Mongodb properties",
+          "required": ["databases"],
           "properties": {
             "cluster_type": {
               "type": "string",
+              "description": "The type of the cluster",
               "default": "REPLICASET",
               "enum": ["REPLICASET", "SHARDED", "GEOSHARDED"]
+            },
+            "databases": {
+              "type":"array",
+              "description": "List of database names"
             },
             "num_shards": {
               "type": "number",
