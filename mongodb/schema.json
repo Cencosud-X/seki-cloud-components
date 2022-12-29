@@ -16,7 +16,8 @@
             },
             "databases": {
               "type":"array",
-              "description": "List of database names"
+              "description": "List of database names",
+              "minItems": 1
             },
             "num_shards": {
               "type": "number",
