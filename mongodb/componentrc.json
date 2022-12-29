@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "Projecto de MongoDB",
   "kind": "mongodb",
-  "tags": ["NoSQL", "Database", "experimental"],
+  "tags": ["NoSQL", "Database", "beta"],
   "icons": {
     "light": "icons/icon-white.svg",
     "dark": "icons/icon.svg"
