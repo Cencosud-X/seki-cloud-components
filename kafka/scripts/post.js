@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = async (runner, args) => {
   try {
-    console.log('> POST: Redis');
+    console.log('> POST: Kafka');
 
     const productConfigPath = path.join(process.cwd(), "config");
     const repoPath = args.repoClonedPath;
