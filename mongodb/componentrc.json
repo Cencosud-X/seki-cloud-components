@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
-  "name": "Project Atlas de MongoDB",
+  "name": "Projecto de MongoDB",
   "kind": "mongodb",
   "tags": ["NoSQL", "Database", "experimental"],
   "icons": {
@@ -8,7 +8,7 @@
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {
-    "es": "Base de datos NoSQL",
+    "es": "Projecto de bases NoSQL",
     "en": "NoSQL database"
   },
   "descriptions": {
