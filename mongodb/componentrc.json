@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
-  "name": "MongoDB",
+  "name": "Project Atlas de MongoDB",
   "kind": "mongodb",
   "tags": ["NoSQL", "Database", "experimental"],
   "icons": {
@@ -12,7 +12,7 @@
     "en": "NoSQL database"
   },
   "descriptions": {
-    "es": "MongoDB es una base de datos de documentos que ofrece una gran escalabilidad y flexibilidad, así como un modelo de consultas e indexación avanzado.",
+    "es": "Un projecto atlas de MongoDB es un repositorio de bases de datos de tipo mongo que ofrece una gran escalabilidad y flexibilidad, así como un modelo de consultas e indexación avanzado.",
     "en": "Long descriptions..."
   },
   "scripts": {
