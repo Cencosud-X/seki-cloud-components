@@ -1,0 +1,9 @@
+{
+  "apiHost": "localhost",
+  "apiPort": 8000,
+  "wsHost": "localhost",
+  "wsPort": 8000,
+  "tokenHmacSecretKey": "secret",
+  "apiKey": "secret",
+  "authServerUrl": "https://localhost:8081"
+}
