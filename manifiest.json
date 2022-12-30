@@ -11,6 +11,7 @@
   },
   "types": [
     "google_bucket/componentrc.json",
+    "google_postgres/componentrc.json",
     "kafka/componentrc.json",
     "pubsub/componentrc.json",
     "npm/componentrc.json",

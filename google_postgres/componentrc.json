@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Servidor de PostgreSQL",
+  "kind": "google_postgres",
+  "tags": ["SQL", "Database", "experimental"],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Instancia de PostgreSQL",
+    "en": "PostgreSQL server instance"
+  },
+  "descriptions": {
+    "es": "Instancia de PostgreSQL que contiene varias bases de datos",
+    "en": "PostgreSQL instance holding many databases"
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}
