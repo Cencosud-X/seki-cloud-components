@@ -5,23 +5,17 @@
       "properties": {
         "properties": {
           "type":"object",
-          "description": "PostgreSQL properties",
-          "required": ["databases"],
+          "description": "Google PostgreSQL properties",
           "properties": {
-            "databases": {
-              "type": "array",
-              "description": "List of database names",
-              "minItems": 1
-            },
             "database_version": {
               "type": "string",
-              "description": "The database version to use",
+              "description": "The PostgreSQL Server version to use.",
               "default": "POSTGRES_14",
               "enum": ["POSTGRES_9_6", "POSTGRES_10", "POSTGRES_11", "POSTGRES_12", "POSTGRES_13", "POSTGRES_14"]
             },
             "tier": {
               "type": "string",
-              "description": "The tier for the master instance.",
+              "description": "The machine type to use. See https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers for more details and supported versions.",
               "default": "db-f1-micro"
             },
             "availability_type": {
@@ -32,8 +26,9 @@
             },
             "disk_size": {
               "type": "number",
-              "description": "The disk size for the master instance",
-              "default": 10
+              "description": "The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB.",
+              "default": 10,
+              "minimum": 10
             }
           }
         }

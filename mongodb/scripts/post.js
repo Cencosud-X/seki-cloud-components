@@ -5,18 +5,16 @@ module.exports = async (runner, args) => {
   try {
     console.log('> POST: MongoDB');
 
+    const productConfigPath = path.join(process.cwd(), "config");
+    const repoPath = args.repoClonedPath;
+    const settingsJsonPath = path.join(repoPath, "templates", "settings.json");
     const rc = args.rc;
-    const productPath = path.join(process.cwd());
-    const productConfigPath = path.join(productPath, "config");
-    const settingsJsonPath = path.join(productConfigPath, `${rc.kind}_${rc.identifier}_settings.json`)
-    
+
     console.log('> Creating settings file for local environment...');
-    
-    // const packageJson = JSON.parse(fs.readFileSync(path.join(productPath, 'package.json'), {encoding:'utf8'}));
-    const data = {
-      connection_string: `mongodb://localhost:27017`
-    };
-    fs.writeFileSync(settingsJsonPath, JSON.stringify(data, null, 2));
+
+    await runner.execute([
+      `cat ${settingsJsonPath} > ${productConfigPath}/${rc.kind}_${rc.identifier}_settings.json`
+    ])
 
     console.log('> POST: process ✅ DONE');
 
