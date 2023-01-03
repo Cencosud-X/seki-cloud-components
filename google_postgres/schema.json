@@ -11,7 +11,9 @@
             "databases": {
               "type": "array",
               "description": "List of database names",
-              "minItems": 1
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 },
+              "uniqueItems": true
             },
             "database_version": {
               "type": "string",
