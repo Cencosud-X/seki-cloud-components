@@ -6,7 +6,13 @@
         "properties": {
           "type":"object",
           "description": "Google PostgreSQL properties",
+          "required": ["databases"],
           "properties": {
+            "databases": {
+              "type": "array",
+              "description": "List of database names",
+              "minItems": 1
+            },
             "database_version": {
               "type": "string",
               "description": "The PostgreSQL Server version to use.",
