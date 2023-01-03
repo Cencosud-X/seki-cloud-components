@@ -1,3 +1,6 @@
 {
-  "connection_string": "postgresql://localhost:5432"
+  "connection_string": "postgresql://localhost:5432",
+  "private_ip_address": "localhost",
+  "username": "postgres",
+  "password": "postgres"
 }
