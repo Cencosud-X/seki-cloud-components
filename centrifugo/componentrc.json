@@ -13,7 +13,7 @@
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {
-    "es": "Servidor de mensajería en tiempo real",
+    "es": "Mensajería en tiempo real",
     "en": "Real-time messaging server"
   },
   "descriptions": {
