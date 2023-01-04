@@ -23,7 +23,7 @@
             "allowed_origins": {
               "type":"string",
               "description": "Comma separated list of allowed origin patterns for WebSocket and SockJS endpoints to prevent CSRF or WebSocket hijacking attacks. See https://centrifugal.dev/docs/server/configuration#allowed_origins",
-              "default": "*.cencox.xyz"
+              "default": "*"
             }
           }
         }
