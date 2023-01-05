@@ -17,6 +17,7 @@
     "npm/componentrc.json",
     "redis/componentrc.json",
     "centrifugo/componentrc.json",
-    "mongodb/componentrc.json"
+    "mongodb/componentrc.json",
+    "bigquery/componentrc.json"
   ]
 }

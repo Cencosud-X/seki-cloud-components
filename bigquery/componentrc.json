@@ -4,7 +4,8 @@
   "kind": "bigquery",
   "tags": [
     "Analitycs",
-    "Warehouse"
+    "Warehouse",
+    "experimental"
   ],
   "icons": {
     "light": "icons/icon-white.svg",
