@@ -26,19 +26,9 @@
               "default": "*"
             },
             "admin_viewer": {
-              "type": "object",
-              "description": "Admin viewer configuration to use Centrifugo API (great debug tool)",
-              "required": ["enabled"],
-              "default": {
-                "enabled": true
-              },
-              "properties": {
-                "enabled": {
-                  "type": "boolean",
-                  "description": "Enable admin viewer",
-                  "default": true
-                }
-              }
+              "type": "boolean",
+              "description": "Enable admin viewer (great tool for debugging)",
+              "default": false
             }
           }
         }
