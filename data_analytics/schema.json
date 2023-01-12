@@ -61,11 +61,11 @@
                             "type": "string",
                             "default": "",
                             "description": "(Optional) Number of milliseconds for which to keep the storage for a partition."
-                          },                                                       
+                          }                                                       
                         }
                       }
                     }
-                  },
+                  }
                 ]
               }
             },
@@ -161,7 +161,7 @@
                         }
                       }
                     }
-                  },
+                  }
                 ]
               }
             },
