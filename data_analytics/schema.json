@@ -44,10 +44,12 @@
                         "properties": {
                           "type": {
                             "type": "string",
+                            "default": "DAY",
                             "description": "(Required) The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively."
                           },
                           "field": {
                             "type": "string",
+                            "default": null,
                             "description": "(Optional) The field used to determine how to create a time-based partition. If time-based partitioning is enabled without this value, the table is partitioned based on the load time."
                           },
                           "require_partition_filter": {
@@ -57,6 +59,7 @@
                           },
                           "expiration_ms": {
                             "type": "string",
+                            "default": "",
                             "description": "(Optional) Number of milliseconds for which to keep the storage for a partition."
                           },                                                       
                         }
@@ -170,9 +173,7 @@
                   "name": "letters_without_dot",
                   "machine_type": "n1-standard-1",
                   "image_family": "common-cu110-notebooks",
-                  "boot_disk_type": "PD_SSD",
-                  "boot_disk_size_gb": "100",
-                  "location": "us-east1-c"
+                  "boot_disk_size_gb": "100"
                 }
               ],
               "minItems": 1,
@@ -182,9 +183,7 @@
                   "name",
                   "machine_type",
                   "image_family",
-                  "boot_disk_type",
-                  "boot_disk_size_gb",
-                  "location"
+                  "boot_disk_size_gb"
                 ],
                 "allOf": [
                   {
