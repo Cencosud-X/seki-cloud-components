@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Data Analytics",
+  "kind": "data_analytics",
+  "tags": [
+    "Analitycs",
+    "Warehouse",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Analítica avanzadaa",
+    "en": "advanced analitycs"
+  },
+  "descriptions": {
+    "es": "Data Analytics es un conjunto de componentes que incluye BigQuery, Data Flow y Vertex AI que te ayuda a administrar y analizar tus datos.",
+    "en": "Long description...."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}

@@ -1,0 +1,234 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type": "object",
+          "description": "Specific properties for the cloud component",
+          "required": [
+            "tables",
+            "templates",
+            "vertex"
+          ],
+          "properties": {
+            "tables": {
+              "type": "array",
+              "description": "Setup the tables that we will create in BigQuery",
+              "default": [
+                {
+                  "table_id": "letters_without_dot"
+                }
+              ],
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "table_id"
+                ],
+                "allOf": [
+                  {
+                    "properties": {
+                      "table_id": {
+                        "type": "string",
+                        "description": "A unique ID for the resource. Changing this forces a new resource to be created."
+                      },
+                      "expiration_time": {
+                        "type": "string",
+                        "default": null,
+                        "description": "(Optional) The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed."
+                      },
+                      "time_partitioning": {
+                        "type": "object",
+                        "description": "(Optional) If specified, configures time-based partitioning for this table.",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "(Required) The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively."
+                          },
+                          "field": {
+                            "type": "string",
+                            "description": "(Optional) The field used to determine how to create a time-based partition. If time-based partitioning is enabled without this value, the table is partitioned based on the load time."
+                          },
+                          "require_partition_filter": {
+                            "type": "boolean",
+                            "default": false,
+                            "description": "(Optional) If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified."
+                          },
+                          "expiration_ms": {
+                            "type": "string",
+                            "description": "(Optional) Number of milliseconds for which to keep the storage for a partition."
+                          },                                                       
+                        }
+                      }
+                    }
+                  },
+                ]
+              }
+            },
+            "templates": {
+              "type": "array",
+              "description": "Setup the tables that we will create in BigQuery",
+              "default": [
+                {
+                  "bucket_name": "letters_without_dot"
+                }
+              ],
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "bucket_name"
+                ],
+                "allOf": [
+                  {
+                    "properties": {
+                      "bucket_name": {
+                        "type": "string",
+                        "description": "(Required) The name of the bucket."
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "(Required) The name of the project."
+                      },
+                      "template": {
+                        "type": "string",
+                        "description": "(Required) The name of the template."
+                      },                          
+                      "parameters": {
+                        "type": "object",
+                        "description": "(Optional) If specified, configures time-based partitioning for this table.",
+                        "properties": {
+                          "inputFile": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "input": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "output": {
+                            "type": "string",
+                            "description": ""
+                          }, 
+                          "project": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "region": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "schema": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "table": {
+                            "type": "string",
+                            "description": ""
+                          }, 
+                          "database": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "javascriptTextTransformGcsPath": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "JSONPath": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "javascriptTextTransformFunctionName": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "outputTable": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "inputFilePattern": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "bigQueryLoadingTemporaryDirectory": {
+                            "type": "string",
+                            "description": ""
+                          }                  
+                        }
+                      }
+                    }
+                  },
+                ]
+              }
+            },
+            "vertex": {
+              "type": "array",
+              "description": "Create a Vertex AI instance",
+              "default": [
+                {
+                  "name": "letters_without_dot",
+                  "machine_type": "n1-standard-1",
+                  "image_family": "common-cu110-notebooks",
+                  "boot_disk_type": "PD_SSD",
+                  "boot_disk_size_gb": "100",
+                  "location": "us-east1-c"
+                }
+              ],
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "machine_type",
+                  "image_family",
+                  "boot_disk_type",
+                  "boot_disk_size_gb",
+                  "location"
+                ],
+                "allOf": [
+                  {
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "(Required) The name specified for the Notebook instance."
+                      },
+                      "machine_type": {
+                        "type": "string",
+                        "default": "n1-standard-1",
+                        "description": "(Required) A reference to a machine type which defines VM kind."
+                      },
+                      "image_family": {
+                        "type": "string",
+                        "default": "common-cu110-notebooks",
+                        "description": "(Optional) The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed."
+                      },
+                      "boot_disk_type": {
+                        "type": "string",
+                        "default": "PD_SSD",
+                        "description": " (Optional) Possible disk types for notebook instances. Possible values are DISK_TYPE_UNSPECIFIED, PD_STANDARD, PD_SSD, PD_BALANCED, and PD_EXTREME."
+                      },
+                      "boot_disk_size_gb": {
+                        "type": "string",
+                        "default": "100",
+                        "description": "(Optional) The size of the boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100."
+                      },
+                      "location": {
+                        "type": "string",
+                        "default": "us-east1-c",
+                        "description": "(Required) A reference to the zone where the machine resides."
+                      }                      
+                    }
+                  }
+                ]
+              }
+            }                               
+          }           
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}

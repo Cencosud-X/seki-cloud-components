@@ -18,6 +18,7 @@
     "redis/componentrc.json",
     "centrifugo/componentrc.json",
     "mongodb/componentrc.json",
-    "bigquery/componentrc.json"
+    "bigquery/componentrc.json",
+    "data_analytics/componentrc.json"
   ]
 }
