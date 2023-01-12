@@ -71,7 +71,7 @@
             },
             "templates": {
               "type": "array",
-              "description": "Setup the tables that we will create in BigQuery",
+              "description": "Setup the templates that we will create in Data Flow",
               "default": [
                 {
                   "bucket_name": "letters_without_dot"
