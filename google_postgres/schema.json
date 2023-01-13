@@ -12,7 +12,7 @@
               "type": "array",
               "description": "List of database names",
               "minItems": 1,
-              "items": { "type": "string", "minLength": 1 },
+              "items": { "type": "string", "minLength": 2 },
               "uniqueItems": true
             },
             "database_version": {
@@ -23,7 +23,7 @@
             },
             "tier": {
               "type": "string",
-              "description": "The machine type to use. See https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers for more details and supported versions.",
+              "description": "The machine type to use. See https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers for more details and supported versions. Postgres supports only shared-core machine types, and custom machine types. See https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create to learn about specifying custom machine types",
               "default": "db-f1-micro"
             },
             "availability_type": {
