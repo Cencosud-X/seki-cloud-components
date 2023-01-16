@@ -37,10 +37,7 @@
                       "time_partitioning": {
                         "type": "object",
                         "required": [
-                          "type",
-                          "field",
-                          "require_partition_filter",
-                          "expiration_ms"
+                          "type"
                         ],
                         "description": "(Optional) If specified, configures time-based partitioning for this table.",
                         "properties": {
