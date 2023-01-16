@@ -15,14 +15,19 @@
               "description": "Setup the templates that we will create in Data Flow",
               "default": [
                 {
-                  "bucket_name": "letters_without_dot"
+                  "bucket_name": "letters_without_dot",
+                  "name": "xxxxxx",
+                  "template": "input.json"
                 }
               ],
               "minItems": 1,
               "items": {
                 "type": "object",
                 "required": [
-                  "bucket_name"
+                  "bucket_name",
+                  "name",
+                  "template",
+                  "parameters"
                 ],
                 "allOf": [
                   {
