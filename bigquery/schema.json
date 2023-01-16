@@ -19,7 +19,8 @@
               "items": {
                 "type": "object",
                 "required": [
-                  "table_id"
+                  "table_id",
+                  "time_partitioning"
                 ],
                 "allOf": [
                   {
@@ -36,7 +37,6 @@
                       "time_partitioning": {
                         "type": "object",
                         "description": "(Optional) If specified, configures time-based partitioning for this table.",
-                        "default": {},
                         "properties": {
                           "type": {
                             "type": "string",
