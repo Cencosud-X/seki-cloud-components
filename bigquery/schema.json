@@ -36,6 +36,7 @@
                       "time_partitioning": {
                         "type": "object",
                         "description": "(Optional) If specified, configures time-based partitioning for this table.",
+                        "default": {},
                         "properties": {
                           "type": {
                             "type": "string",
