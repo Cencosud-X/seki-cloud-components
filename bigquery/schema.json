@@ -6,7 +6,65 @@
         "properties": {
           "type": "object",
           "description": "Specific properties for the cloud component",
-          "properties": {}
+          "properties": {
+            "tables": {
+              "type": "array",
+              "description": "Setup the tables that we will create in BigQuery",
+              "default": [
+                {
+                  "table_id": "letters_without_dot"
+                }
+              ],
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "table_id"
+                ],
+                "allOf": [
+                  {
+                    "properties": {
+                      "table_id": {
+                        "type": "string",
+                        "description": "A unique ID for the resource. Changing this forces a new resource to be created."
+                      },
+                      "expiration_time": {
+                        "type": "string",
+                        "default": null,
+                        "description": "(Optional) The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed."
+                      },
+                      "time_partitioning": {
+                        "type": "object",
+                        "description": "(Optional) If specified, configures time-based partitioning for this table.",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "default": "DAY",
+                            "description": "(Required) The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively."
+                          },
+                          "field": {
+                            "type": "string",
+                            "default": null,
+                            "description": "(Optional) The field used to determine how to create a time-based partition. If time-based partitioning is enabled without this value, the table is partitioned based on the load time."
+                          },
+                          "require_partition_filter": {
+                            "type": "boolean",
+                            "default": false,
+                            "description": "(Optional) If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified."
+                          },
+                          "expiration_ms": {
+                            "type": "string",
+                            "default": "",
+                            "description": "(Optional) Number of milliseconds for which to keep the storage for a partition."
+                          }                                                       
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       }
     },
