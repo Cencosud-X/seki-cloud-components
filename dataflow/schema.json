@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type": "object",
+          "description": "Dataflow properties",
+          "required": [
+            "templates"
+          ],
+          "properties": {
+            "templates": {
+              "type": "array",
+              "description": "Setup the templates that we will create in Data Flow",
+              "default": [
+                {
+                  "bucket_name": "letters_without_dot"
+                }
+              ],
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "bucket_name"
+                ],
+                "allOf": [
+                  {
+                    "properties": {
+                      "bucket_name": {
+                        "type": "string",
+                        "description": "(Required) The name of the bucket."
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "(Required) The name of the project."
+                      },
+                      "template": {
+                        "type": "string",
+                        "description": "(Required) The name of the template."
+                      },                          
+                      "parameters": {
+                        "type": "object",
+                        "description": "(Optional) If specified, configures time-based partitioning for this table.",
+                        "properties": {
+                          "inputFile": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "input": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "output": {
+                            "type": "string",
+                            "description": ""
+                          }, 
+                          "project": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "region": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "schema": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "table": {
+                            "type": "string",
+                            "description": ""
+                          }, 
+                          "database": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "javascriptTextTransformGcsPath": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "JSONPath": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "javascriptTextTransformFunctionName": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "outputTable": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "inputFilePattern": {
+                            "type": "string",
+                            "description": ""
+                          },
+                          "bigQueryLoadingTemporaryDirectory": {
+                            "type": "string",
+                            "description": ""
+                          }                  
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }           
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}
