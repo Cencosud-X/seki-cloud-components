@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Vertex AI",
+  "kind": "vertex_ai",
+  "tags": [
+    "Analitycs",
+    "Warehouse",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Analítica avanzadaa",
+    "en": "advanced analitycs"
+  },
+  "descriptions": {
+    "es": "Una instancia de Cloud AI Platform Notebook",
+    "en": "A Cloud AI Platform Notebook instance."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}

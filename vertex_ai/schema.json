@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type": "object",
+          "description": "Specific properties for the cloud component",
+          "required": [
+            "vertex"
+          ],
+          "properties": {
+            "vertex": {
+              "type": "array",
+              "description": "Create a Vertex AI instance",
+              "default": [
+                {
+                  "name": "letters_without_dot",
+                  "machine_type": "n1-standard-1",
+                  "image_family": "common-cu110-notebooks",
+                  "boot_disk_size_gb": "100"
+                }
+              ],
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "machine_type",
+                  "image_family",
+                  "boot_disk_size_gb"
+                ],
+                "allOf": [
+                  {
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "(Required) The name specified for the Notebook instance."
+                      },
+                      "machine_type": {
+                        "type": "string",
+                        "default": "n1-standard-1",
+                        "description": "(Required) A reference to a machine type which defines VM kind."
+                      },
+                      "image_family": {
+                        "type": "string",
+                        "default": "common-cu110-notebooks",
+                        "description": "(Optional) The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed."
+                      },
+                      "boot_disk_type": {
+                        "type": "string",
+                        "default": "PD_SSD",
+                        "description": " (Optional) Possible disk types for notebook instances. Possible values are DISK_TYPE_UNSPECIFIED, PD_STANDARD, PD_SSD, PD_BALANCED, and PD_EXTREME."
+                      },
+                      "boot_disk_size_gb": {
+                        "type": "string",
+                        "default": "100",
+                        "description": "(Optional) The size of the boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100."
+                      },
+                      "location": {
+                        "type": "string",
+                        "default": "us-east1-c",
+                        "description": "(Required) A reference to the zone where the machine resides."
+                      }                      
+                    }
+                  }
+                ]
+              }
+            }                               
+          }           
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}
