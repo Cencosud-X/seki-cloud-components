@@ -16,8 +16,8 @@
     "en": "advanced analitycs"
   },
   "descriptions": {
-    "es": "Data Flow",
-    "en": "Long description...."
+    "es": "Crear un job de Dataflow, que es una implementación de Apache Beam corriendo sobre Google Compute Engine.",
+    "en": "Creates a job on Dataflow, which is an implementation of Apache Beam running on Google Compute Engine."
   },
   "scripts": {
     "rollback": "scripts/rollback.js"
