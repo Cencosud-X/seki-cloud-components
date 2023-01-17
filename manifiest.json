@@ -19,8 +19,7 @@
     "centrifugo/componentrc.json",
     "mongodb/componentrc.json",
     "bigquery/componentrc.json",
-    "dataflow/componentrc.json",    
-    "data_analytics/componentrc.json",
+    "dataflow/componentrc.json",
     "vertex_ai/componentrc.json"
   ]
 }
