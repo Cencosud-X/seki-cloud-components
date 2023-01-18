@@ -20,6 +20,7 @@
     "mongodb/componentrc.json",
     "bigquery/componentrc.json",
     "dataflow/componentrc.json",
+    "elastic/componentrc.json",
     "vertex_ai/componentrc.json"
   ]
 }

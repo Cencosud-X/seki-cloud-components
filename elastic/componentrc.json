@@ -3,19 +3,20 @@
   "name": "Elastic",
   "kind": "elastic",
   "tags": [
+    "Search",
     "Database",
-    "Memory"
+    "experimental"
   ],
   "icons": {
     "light": "icons/icon-white.svg",
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {
-    "es": "Base de datos NoSQL",
-    "en": "NoSQL database"
+    "es": "Despliegue en Elastic Cloud",
+    "en": "Elastic Cloud deployment"
   },
   "descriptions": {
-    "es": "Elastic es un motor de búsqueda con capacidades analíticas que permite procesar grandes volúmenes de datos en tiempo real. Es una tecnología de código abierto que se adapta a las necesidades de cada proyecto.",
+    "es": "Despliegue en Elastic Cloud que incluye Elastic Search y Kibana. Elastic es un motor de búsqueda con capacidades analíticas que permite procesar grandes volúmenes de datos en tiempo real.",
     "en": "Long description...."
   },
   "scripts": {
