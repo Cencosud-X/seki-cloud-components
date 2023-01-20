@@ -13,45 +13,18 @@
               "default": false
             },
             "deployment_template_id": {
+              "type": "string",
               "description": "Deployment template to create the deployment from. Defautls to gcp-compute-optimized. See the full list of regions and deployment templates available in ESS here: https://www.elastic.co/guide/en/cloud/current/ec-regions-templates-instances.html",
               "default": "gcp-compute-optimized",
-              "oneOf": [
-                {
-                  "const": "gcp-compute-optimized",
-                  "description": "Designed for search-heavy workloads."
-                },
-                {
-                  "const": "gcp-storage-optimized",
-                  "description": "Good for most ingestion use cases with 7-10 days of data available for fast access. Also good for light search use cases without heavy indexing or CPU needs."
-                },
-                {
-                  "const": "gcp-storage-optimized-dense",
-                  "description": "Ideal for ingestion use cases with more than 10 days of data available for fast access. Also good for light search use cases with very large data sets."
-                },
-                {
-                  "const":"gcp-memory-optimized",
-                  "description": "Best for small data sets and low query loads."
-                },
-                {
-                  "const": "gcp-general-purpose",
-                  "description": "Suitable for ingestion use cases with 5-7 days of data available for fast access. Also good for search workloads with less-frequent indexing and medium to high querying loads. Provides a balance of storage, memory, and CPU."
-                },
-                {
-                  "const": "gcp-cpu-optimized",
-                  "description": "Suitable for ingestion use cases with 1-4 days of data available for fast access and for search use cases with indexing and querying workloads. Provides the most CPU resources per unit of RAM."
-                },
-                {
-                  "const": "gcp-hot-warm",
-                  "description": "Useful for time-series analytics that benefit from automatic index curation."
-                },
-                {
-                  "const": "gcp-appsearch-dedicated",
-                  "description": "Easily implement powerful search experiences for your website, app, or workplace with refined APIs and tools."
-                },
-                {
-                  "const": "gcp-io-optimized",
-                  "description": "Use for for all-purpose workloads, including time-series data like logs and metrics."
-                }
+              "enum": [
+                "gcp-compute-optimized",
+                "gcp-storage-optimized", "gcp-storage-optimized-dense",
+                "gcp-memory-optimized",
+                "gcp-general-purpose",
+                "gcp-cpu-optimized",
+                "gcp-hot-warm",
+                "gcp-appsearch-dedicated",
+                "gcp-io-optimized"
               ]
             }
           }
