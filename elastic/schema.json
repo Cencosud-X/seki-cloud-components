@@ -6,7 +6,13 @@
         "properties": {
           "type": "object",
           "description": "Elastic properties",
-          "properties": {}
+          "properties": {
+            "elasticsearch_autoscale": {
+              "type": "boolean",
+              "description": "ElasticSearch deployment with autoscaling",
+              "default": false
+            }
+          }
         }
       }
     },
