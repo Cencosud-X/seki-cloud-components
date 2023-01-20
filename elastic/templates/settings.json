@@ -1,0 +1,5 @@
+{
+  "elasticsearch_username": "",
+  "elasticsearch_password": "",
+  "elasticsearch_endpoint": "http://localhost:9200"
+}
