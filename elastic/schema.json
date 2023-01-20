@@ -26,16 +26,6 @@
               "description": "(Optional) Autoscaling policy defining the maximum and / or minimum total size for this topology element.",
               "default": false
             },
-            "zone_count": {
-              "type": "number",
-              "description": "(Optional) Number of zones the instance type of the Elasticsearch cluster will span. This is used to set or unset HA on an Elasticsearch node type. If not is production, the default value is '1'.",
-              "default": 1,
-              "enum": [
-                "1", 
-                "2",
-                "3"
-              ] 
-            },
             "min_size": {
               "type": "string",
               "description": "(Optional) Amount in Gigabytes per topology element in the '<size in GB>g' notation. When omitted, it defaults to the deployment template value.",
@@ -67,6 +57,22 @@
                 "gcp-io-optimized"
               ]
             }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "autoscale": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "autoscaling_max_size": {
+            "type": "string"
           }
         }
       }
