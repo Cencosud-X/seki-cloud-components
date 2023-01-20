@@ -9,7 +9,7 @@
           "properties": {
             "elasticsearch_size": {
               "type": "string",
-              "description": "Amount in Gigabytes per topology element in the "<size in GB>g" notation. When omitted, it defaults to the deployment template value.",
+              "description": "Amount in Gigabytes per topology element in the <size in GB>g notation. When omitted, it defaults to the deployment template value.",
               "default": "16g"
             },
             "elasticsearch_autoscale": {
