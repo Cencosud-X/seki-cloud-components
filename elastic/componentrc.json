@@ -12,12 +12,12 @@
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {
-    "es": "Despliegue en Elastic Cloud",
-    "en": "Elastic Cloud deployment"
+    "es": "Elastic Search",
+    "en": "Elastic Search"
   },
   "descriptions": {
-    "es": "Despliegue en Elastic Cloud que incluye Elastic Search y Kibana. Elastic es un motor de búsqueda con capacidades analíticas que permite procesar grandes volúmenes de datos en tiempo real.",
-    "en": "Long description...."
+    "es": "Despliegue en Elastic Cloud que incluye el servicio de Elastic Search",
+    "en": "Elastic Cloud deployment. It only includes the Elastic Search service"
   },
   "scripts": {
     "rollback": "scripts/rollback.js",
