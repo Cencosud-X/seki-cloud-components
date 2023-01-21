@@ -9,7 +9,7 @@
           "properties": {
             "topology_id": {
               "type": "string",
-              "description": "(Required) Unique topology identifier. To avoid infinite diff loops, topology blocks should be ordered alphabetically by the topology.id field. The order with the current data tiers at the time of this writing would be: 'cold', 'coordinating', 'frozen', 'hot_content', 'master', 'ml', 'warm'.",
+              "description": "Unique topology identifier",
               "default": "hot_content",
               "enum": [
                 "hot_content",
@@ -23,24 +23,19 @@
             },            
             "autoscale": {
               "type": "boolean",
-              "description": "(Optional) Autoscaling policy defining the maximum and / or minimum total size for this topology element.",
+              "description": "Automatically scale",
               "default": false
             },
             "min_size": {
               "type": "string",
-              "description": "(Optional) Amount in Gigabytes per topology element in the '<size in GB>g' notation. When omitted, it defaults to the deployment template value.",
+              "description": "Amount in Gigabytes per topology element in the '<size in GB>g' notation",
               "default": "16g"
             },
             "type_size_resource": {
               "type": "string",
-              "description": "(Optional) Type of resource to which the size is assigned. Defaults to 'memory'",
+              "description": "Type of resource to which the size is assigned. Defaults to 'memory'",
               "default": "memory"
             }, 
-            "autoscaling_max_size": {
-              "type": "string",
-              "description": "(Optional) Defines the maximum size the deployment will scale up to. When set, scaling up will be enabled. All tiers should support this option.",
-              "default": "64g"
-            },   
             "deployment_template_id": {
               "type": "string",
               "description": "Deployment template to create the deployment from. Defautls to gcp-compute-optimized. See the full list of regions and deployment templates available in ESS here: https://www.elastic.co/guide/en/cloud/current/ec-regions-templates-instances.html",
@@ -57,22 +52,24 @@
                 "gcp-io-optimized"
               ]
             }
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "autoscale": {
-            "const": true
-          }
-        }
-      },
-      "then": {
-        "properties": {
-          "autoscaling_max_size": {
-            "type": "string"
+          },
+          "if": {
+            "properties": {
+              "autoscale": {
+                "const": true
+              }
+            },
+            "required": ["autoscale"]
+          },
+          "then": {
+            "required": ["autoscaling_max_size"],
+            "properties": {
+              "autoscaling_max_size": {
+                "type": "string",
+                "description": "Defines the maximum size the deployment will scale up to. Only applies if autoscale == true",
+                "default": "64g"
+              }
+            }
           }
         }
       }
