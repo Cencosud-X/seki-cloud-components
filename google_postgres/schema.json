@@ -22,21 +22,26 @@
               "enum": ["POSTGRES_9_6", "POSTGRES_10", "POSTGRES_11", "POSTGRES_12", "POSTGRES_13", "POSTGRES_14"]
             },
             "tier": {
-              "type": "string",
-              "description": "The machine type to use. See https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers for more details and supported versions. Postgres supports only shared-core machine types, and custom machine types. See https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create to learn about specifying custom machine types",
-              "default": "db-f1-micro"
+              "$ref": "#/definitions/tier"
             },
             "availability_type": {
-              "type": "string",
-              "description": "The availability type for the master instance.This is only used to set up high availability for the PostgreSQL instance. Can be either `ZONAL` or `REGIONAL`.",
-              "default": "REGIONAL",
-              "enum": ["ZONAL", "REGIONAL"]
+              "$ref": "#/definitions/availability_type"
             },
             "disk_size": {
-              "type": "number",
-              "description": "The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB.",
-              "default": 10,
-              "minimum": 10
+              "$ref": "#/definitions/disk_size"
+            },
+            "production": {
+              "properties": {
+                "tier": {
+                  "$ref": "#/definitions/tier"
+                },
+                "availability_type": {
+                  "$ref": "#/definitions/availability_type"
+                },
+                "disk_size": {
+                  "$ref": "#/definitions/disk_size"
+                }
+              }
             }
           }
         }
@@ -45,5 +50,24 @@
     {
       "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
     }
-  ]
+  ],
+  "definitions": {
+    "tier": {
+      "type": "string",
+      "description": "The machine type to use. See https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers for more details and supported versions. Postgres supports only shared-core machine types, and custom machine types. See https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create to learn about specifying custom machine types",
+      "default": "db-f1-micro"
+    },
+    "availability_type": {
+      "type": "string",
+      "description": "The availability type for the master instance. This is only used to set up high availability for the PostgreSQL instance. Can be either `ZONAL` or `REGIONAL`.",
+      "default": "REGIONAL",
+      "enum": ["ZONAL", "REGIONAL"]
+    },
+    "disk_size": {
+      "type": "number",
+      "description": "The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB.",
+      "default": 10,
+      "minimum": 10
+    }
+  }
 }
