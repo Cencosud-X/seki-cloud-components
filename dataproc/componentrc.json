@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Dataproc",
+  "kind": "dataproc",
+  "tags": [
+    "Spark",
+    "Hadoop",
+    "Analyctis"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Servicio manejado de Spark y Hadoop",
+    "en": "Google managed service for Spark and Hadoop"
+  },
+  "descriptions": {
+    "es": "Dataproc es un servicio manejado de Spark y Hadoop que permite sacar provecho de herramientas open source para procesamiento de datos en batch, streaming y machine learning",
+    "en": "Dataproc is a managed Spark and Hadoop service that lets you take advantage of open source data tools for batch processing, querying, streaming, and machine learning"
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}

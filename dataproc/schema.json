@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type": "object",
+          "description": "Dataproc properties",
+          "required": [
+            "clusters"
+          ],
+          "properties": {
+            "clusters": {
+              "type": "array",
+              "minItems": 1,
+              "default": 
+                [
+                  {
+                    "name": "my-cluster",
+                    "master_machine_type": "n1-standard-2",
+                    "worker_machine_type": "n1-standard-2",
+                    "boot_disk_type": "pd-ssd",
+                    "boot_disk_size_gb": 256,
+                    "num_instances": 2
+                  }
+                ],
+              "items": {
+                "type": "object",
+                "required": [
+                  "name", "master_machine_type", "worker_machine_type", "boot_disk_type", "boot_disk_size_gb", "num_instances"
+                ],
+                "allOf": [
+                  {
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "The cluster name"                        
+                      },
+                      "master_machine_type": {
+                        "type": "string",
+                        "description": "Master machine type",
+                        "default": "n1-standard-2",
+                        "enum": [
+                          "n1-standard-2", "n1-standard-4", "n1-standard-8"
+                        ]
+                      },
+                      "worker_machine_type": {
+                        "type": "string",
+                        "description": "Worker machine type",
+                        "default": "n1-standard-2",
+                        "enum": [
+                          "n1-standard-2", "n1-standard-4", "n1-standard-8"
+                        ]
+                      },
+                      "boot_disk_type": {
+                        "type": "string",
+                        "description": "Disk type",
+                        "default": "pd-ssd",
+                        "enum": [
+                          "pd-standard", "pd-ssd", "pd-balanced"
+                        ]
+                      },
+                      "boot_disk_size_gb": {
+                        "type": "number",
+                        "description": "Disk size",
+                        "default": "256"
+                      },
+                      "num_instances": {
+                        "type": "number",
+                        "description": "Number of workers",
+                        "default": "2",
+                        "minimum": 1,
+                        "maximum": 50
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}
