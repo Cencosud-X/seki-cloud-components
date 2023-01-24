@@ -5,7 +5,8 @@
   "tags": [
     "Spark",
     "Hadoop",
-    "Analyctis"
+    "Analyctis",
+    "experimental"
   ],
   "icons": {
     "light": "icons/icon-white.svg",
