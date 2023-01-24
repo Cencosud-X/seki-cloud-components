@@ -13,11 +13,11 @@
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {
-    "es": "Servicio manejado de Spark y Hadoop",
-    "en": "Google managed service for Spark and Hadoop"
+    "es": "Servicio de Spark y Hadoop",
+    "en": "Spark and Hadoop"
   },
   "descriptions": {
-    "es": "Dataproc es un servicio manejado de Spark y Hadoop que permite sacar provecho de herramientas open source para procesamiento de datos en batch, streaming y machine learning",
+    "es": "Dataproc es un servicio administrado de Spark y Hadoop que permite sacar provecho de herramientas open source para procesamiento de datos en batch, streaming y machine learning",
     "en": "Dataproc is a managed Spark and Hadoop service that lets you take advantage of open source data tools for batch processing, querying, streaming, and machine learning"
   },
   "scripts": {
