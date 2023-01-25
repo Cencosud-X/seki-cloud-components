@@ -4,18 +4,20 @@
     {
       "properties": {
         "properties": {
-          "allOf": [
-            {
-              "$ref": "#/definitions/properties"
+          "type": "object",
+          "description": "Redis properties",
+          "properties": {
+            "memory_size_gb": {
+              "$ref": "#/definitions/memory_size_gb"
             },
-            {
+            "production": {
               "properties": {
-                "production": {
-                  "$ref": "#/definitions/properties"
+                "memory_size_gb": {
+                  "$ref": "#/definitions/memory_size_gb"
                 }
               }
             }
-          ]
+          }
         }
       }
     },
@@ -24,68 +26,12 @@
     }
   ],
   "definitions": {
-    "properties": {
-      "type": "object",
-      "description": "Redis properties",
-      "properties": {
-        "tier": {
-          "type": "string",
-          "default": "BASIC",
-          "enum": [ "BASIC", "STANDARD_HA"],
-          "description": "The service tier of the redis instance. The recommend value for staging is BASIC."
-        },
-        "memory_size_gb": {
-          "type": "number",
-          "default": 1,
-          "minimum": 1,
-          "maximum": 10,
-          "description": "Redis memory size in GiB used by servers"
-        }
-      },
-      "if": {
-        "properties": {
-          "tier": {
-            "const": "STANDARD_HA"
-          }
-        },
-        "required": ["tier"]
-      },
-      "then": {
-        "properties": {
-          "replica_count": {
-            "type":"number",
-            "description": "The number of replicas in high availability tier",
-            "default": 1,
-            "minimum": 1,
-            "maximum": 4
-          },
-          "read_replicas_mode": {
-            "type":"string",
-            "enum": ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"],
-            "default": "READ_REPLICAS_DISABLED",
-            "description": "Read replicas mode"
-          }
-        },
-        "if": {
-          "properties": {
-            "read_replicas_mode": {
-              "const": "READ_REPLICAS_ENABLED"
-            }
-          },
-          "required": ["read_replicas_mode"]
-        },
-        "then": {
-          "properties": {
-            "memory_size_gb": {
-              "type": "number",
-              "default": 5,
-              "minimum": 5,
-              "maximum": 10,
-              "description": "Redis memory size in GiB used by servers"
-            }
-          }
-        }
-      }
+    "memory_size_gb": {
+      "type": "number",
+      "default": 1,
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Redis memory size in GiB used by servers"
     }
   }
 }
