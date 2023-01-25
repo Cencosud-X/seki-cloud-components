@@ -12,7 +12,7 @@
     "en": "NoSQL database"
   },
   "descriptions": {
-    "es": "Un proyecto atlas de MongoDB es un cluster que puede contener multiples bases de datos que escalan bajo demanda. IMPORTANTE: Evita usar un proyecto por base de datos para no incurrir gastos innecesarios.",
+    "es": "Un proyecto atlas de MongoDB es un cluster que puede contener multiples bases de datos que escalan bajo demanda. IMPORTANTE 👀: Evita usar un proyecto por base de datos para no incurrir gastos innecesarios.",
     "en": "Long descriptions..."
   },
   "scripts": {
