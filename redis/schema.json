@@ -7,6 +7,12 @@
           "type": "object",
           "description": "Redis properties",
           "required": ["memory_size_gb"],
+          "default": {
+            "memory_size_gb": 1,
+            "production": {
+                "memory_size_gb": 5
+            }
+          },
           "properties": {
             "memory_size_gb": {
               "$ref": "#/definitions/memory_size_gb"
@@ -14,7 +20,15 @@
             "production": {
               "properties": {
                 "memory_size_gb": {
-                  "$ref": "#/definitions/memory_size_gb"
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/memory_size_gb"
+                    },
+                    {
+                      "minimum": 5,
+                      "default": 5
+                    }
+                  ]
                 }
               }
             }
