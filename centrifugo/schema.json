@@ -16,19 +16,26 @@
           "description": "Centrifugo properties",
           "properties": {
             "high_availability": {
-              "type": "boolean",
-              "description": "High availability deployment with autoscaling",
-              "default": false
+              "$ref": "#/definitions/high_availability"
             },
             "allowed_origins": {
-              "type":"string",
-              "description": "Comma separated list of allowed origin patterns for WebSocket and SockJS endpoints to prevent CSRF or WebSocket hijacking attacks. See https://centrifugal.dev/docs/server/configuration#allowed_origins",
-              "default": "*"
+             "$ref": "#/definitions/allowed_origins"
             },
             "admin_viewer": {
-              "type": "boolean",
-              "description": "Enable admin viewer (great tool for debugging)",
-              "default": false
+              "$ref": "#/definitions/admin_viewer"
+            },
+            "production": {
+              "properties": {
+                "high_availability": {
+                  "$ref": "#/definitions/high_availability"
+                },
+                "allowed_origins": {
+                 "$ref": "#/definitions/allowed_origins"
+                },
+                "admin_viewer": {
+                  "$ref": "#/definitions/admin_viewer"
+                }
+              }
             }
           }
         }
@@ -37,5 +44,22 @@
     {
       "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
     }
-  ]
+  ],
+  "definitions": {
+    "high_availability": {
+      "type": "boolean",
+      "description": "High availability deployment with autoscaling",
+      "default": false
+    },
+    "allowed_origins": {
+      "type":"string",
+      "description": "Comma separated list of allowed origin patterns for WebSocket and SockJS endpoints to prevent CSRF or WebSocket hijacking attacks. See https://centrifugal.dev/docs/server/configuration#allowed_origins",
+      "default": "*"
+    },
+    "admin_viewer": {
+      "type": "boolean",
+      "description": "Enable admin viewer (great tool for debugging)",
+      "default": false
+    }
+  }
 }
