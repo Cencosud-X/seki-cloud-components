@@ -7,67 +7,13 @@
           "type": "object",
           "description": "Elastic properties",
           "properties": {
-            "topology_id": {
-              "type": "string",
-              "description": "Unique topology identifier",
-              "default": "hot_content",
-              "enum": [
-                "hot_content",
-                "warm",
-                "cold",
-                "coordinating",
-                "frozen",
-                "ml",
-                "master"
-              ]              
-            },            
-            "autoscale": {
-              "type": "boolean",
-              "description": "Automatically scale",
-              "default": false
-            },
-            "min_size": {
-              "type": "string",
-              "description": "Amount in Gigabytes per topology element in the '<size in GB>g' notation",
-              "default": "16g"
-            },
-            "type_size_resource": {
-              "type": "string",
-              "description": "Type of resource to which the size is assigned. Defaults to 'memory'",
-              "default": "memory"
-            }, 
-            "deployment_template_id": {
-              "type": "string",
-              "description": "Deployment template to create the deployment from. Defautls to gcp-compute-optimized. See the full list of regions and deployment templates available in ESS here: https://www.elastic.co/guide/en/cloud/current/ec-regions-templates-instances.html",
-              "default": "gcp-compute-optimized",
-              "enum": [
-                "gcp-compute-optimized",
-                "gcp-storage-optimized", 
-                "gcp-storage-optimized-dense",
-                "gcp-memory-optimized",
-                "gcp-general-purpose",
-                "gcp-cpu-optimized",
-                "gcp-hot-warm",
-                "gcp-appsearch-dedicated",
-                "gcp-io-optimized"
-              ]
-            }
-          },
-          "if": {
-            "properties": {
-              "autoscale": {
-                "const": true
-              }
-            },
-            "required": ["autoscale"]
-          },
-          "then": {
-            "required": ["autoscaling_max_size"],
-            "properties": {
-              "autoscaling_max_size": {
-                "type": "string",
-                "description": "Defines the maximum size the deployment will scale up to. Only applies if autoscale == true",
-                "default": "64g"
+            "production": {
+              "properties": {
+                "autoscale": {
+                  "type": "boolean",
+                  "description": "Automatically scale",
+                  "default": false
+                }
               }
             }
           }
