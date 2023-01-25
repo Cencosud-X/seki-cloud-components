@@ -10,7 +10,8 @@
           "default": {
             "memory_size_gb": 1,
             "production": {
-                "memory_size_gb": 5
+                "tier": "BASIC",
+                "memory_size_gb": 1
             }
           },
           "properties": {
@@ -18,17 +19,32 @@
               "$ref": "#/definitions/memory_size_gb"
             },
             "production": {
+              "required": ["tier", "memory_size_gb"],
               "properties": {
+                "tier": {
+                  "type": "string",
+                  "default": "BASIC",
+                  "enum": [ "BASIC", "STANDARD_HA"],
+                  "description": "The service tier of the redis instance"
+                },
                 "memory_size_gb": {
-                  "allOf": [
-                    {
-                      "$ref": "#/definitions/memory_size_gb"
-                    },
-                    {
-                      "minimum": 5,
-                      "default": 5
-                    }
-                  ]
+                  "$ref": "#/definitions/memory_size_gb"
+                }
+              },
+              "if": {
+                "properties": {
+                  "tier": {
+                    "const": "STANDARD_HA"
+                  }
+                },
+                "required": ["tier"]
+              },
+              "then": {
+                "properties": {
+                  "memory_size_gb": {
+                    "default": 5,
+                    "minimum": 5
+                  }
                 }
               }
             }
