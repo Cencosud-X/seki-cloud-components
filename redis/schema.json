@@ -6,6 +6,7 @@
         "properties": {
           "type": "object",
           "description": "Redis properties",
+          "required": ["memory_size_gb"],
           "properties": {
             "memory_size_gb": {
               "$ref": "#/definitions/memory_size_gb"
