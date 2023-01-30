@@ -9,10 +9,10 @@
           "properties": {
             "production": {
               "properties": {
-                "autoscale": {
-                  "type": "boolean",
-                  "description": "Automatically scale",
-                  "default": false
+                "availability_zone_count": {
+                  "type": "number",
+                  "description": "Amount of zones used to deploy in high availability mode. Increment to provide more availability in your cluster. Take it slow to avoid unnecessary costs",
+                  "default": 1
                 }
               }
             }
