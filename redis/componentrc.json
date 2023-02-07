@@ -12,7 +12,7 @@
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {
-    "es": "Base de datos en memoria",
+    "es": "Base de datos en memory",
     "en": "Memory database"
   },
   "descriptions": {
