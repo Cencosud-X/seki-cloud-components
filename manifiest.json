@@ -19,6 +19,7 @@
     "centrifugo/componentrc.json",
     "mongodb/componentrc.json",
     "bigquery/componentrc.json",
+    "sendgrid/componentrc.json",
     "dataflow/componentrc.json",
     "elastic/componentrc.json",
     "dataproc/componentrc.json",
