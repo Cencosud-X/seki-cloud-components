@@ -26,5 +26,9 @@
   "interpolations": {
     "source": "template"
   },
-  "output": "settings.json"
+  "output": "settings.json",
+  "color": "#5584FF",
+  "stream": {
+    "uid": "43ff4c4d6a13865a23340406c9fb5847"
+  }
 }
