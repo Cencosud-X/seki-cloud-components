@@ -6,7 +6,12 @@
         "properties": {
           "type":"object",
           "description": "Cloudflare Main Configuration",
+          "required": ["cloudflare_zone_id"],
           "properties": {
+            "cloudflare_zone_id": {
+              "type": "string",
+              "description": "The Zone ID"
+            },
             "always_online": {
               "type": "string",
               "description": "Keep your website online for visitors when your origin server is unavailable",
