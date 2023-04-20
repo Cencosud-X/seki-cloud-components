@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type":"object",
+          "description": "Cloudflare Main Configuration",
+          "properties": {
+            "always_online": {
+              "type": "string",
+              "description": "Keep your website online for visitors when your origin server is unavailable",
+              "enum": ["on", "off"],
+              "default": "off"
+            },
+            "always_use_https": {
+              "type": "string",
+              "description": "Redirect all requests with scheme http to https",
+              "enum": ["on", "off"],
+              "default": "off"
+            },
+            "browser_cache_ttl": {
+              "type": "number",
+              "description": "Browser cache TTL",
+              "default": 14400,
+              "enum": [120, 300, 1200, 1800, 3600, 7200, 10800, 14400, 18000]
+            }
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}

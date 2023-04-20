@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Cloudflare Zone",
+  "kind": "cloudflare_zone",
+  "tags": [
+    "Security",
+    "Cloudflare",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Configuración principal de Cloudflare",
+    "en": "Cloudflare Main Configuration"
+  },
+  "descriptions": {
+    "es": "Agrega capa de seguridad perimetral a los sitios web y aplicaciones móviles para protegerlos de ataques maliciosos, como por ejemplo: denegación de servicio (DDoS), Inyecciones de código malicioso, bots y spam.",
+    "en": "Adds perimeter security to websites and mobile apps to protect them from malicious attacks such as: Denial of Service (DDoS), Malicious Code Injections, bots, and spam."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}
