@@ -71,7 +71,18 @@
                         "default": "2",
                         "minimum": 1,
                         "maximum": 50
-                      }
+                      },
+                      "initialization_script": {
+                        "type": "array",
+                        "description": "list of scripts",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "initialization_timeout_sec": {
+                        "type": "number",
+                        "description": "The maximum time in seconds"
+                      }                      
                     }
                   }
                 ]
