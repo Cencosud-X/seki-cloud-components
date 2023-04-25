@@ -24,11 +24,131 @@
               "enum": ["on", "off"],
               "default": "off"
             },
+            "automatic_https_rewrites": {
+              "type": "string",
+              "description": "Automatic HTTPS Rewrites helps fix mixed content by changing “http” to “https” for all resources",
+              "enum": ["on", "off"],
+              "default": "off"
+            },
+            "brotli": {
+              "type": "string",
+              "description": "Speed up page load times for your visitor’s HTTPS traffic by applying Brotli compression.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
             "browser_cache_ttl": {
               "type": "number",
               "description": "Browser cache TTL",
               "default": 14400,
               "enum": [120, 300, 1200, 1800, 3600, 7200, 10800, 14400, 18000]
+            },
+            "browser_check": {
+              "type": "string",
+              "description": "Evaluate HTTP headers from your visitors browser for threats. If a threat is found a block page will be delivered.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "cache_level": {
+              "type": "string",
+              "description": "Determine how much of your website's static content you want Cloudflare to cache.",
+              "enum": ["aggressive", "basic", "simplified"],
+              "default": "aggressive"
+            },
+            "challenge_ttl": {
+              "type": "number",
+              "description": "Challenge TTL",
+              "default": 1800,
+              "enum": [120, 300, 1200, 1800, 3600, 7200, 10800, 14400, 18000]
+            },
+            "http2": {
+              "type": "string",
+              "description": "Accelerates your website with HTTP/2.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "http3": {
+              "type": "string",
+              "description": "Accelerates HTTP requests by using QUIC, which provides encryption and performance improvements compared to TCP and TLS.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "ip_geolocation": {
+              "type": "string",
+              "description": "Include the country code of the visitor location with all requests to your website.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "ipv6": {
+              "type": "string",
+              "description": "Enable IPv6 support and gateway.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "max_upload": {
+              "type": "number",
+              "description": "The amount of data visitors can upload to your website in a single request.",
+              "default": 100,
+              "enum": [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+            },
+            "min_tls_version": {
+              "type": "string",
+              "description": "Only allow HTTPS connections from visitors that support the selected TLS protocol version or newer.",
+              "enum": ["1.0", "1.1", "1.2","1.3"],
+              "default": "1.0"
+            },
+            "opportunistic_encryption": {
+              "type": "string",
+              "description": "Opportunistic Encryption allows browsers to benefit from the improved performance of HTTP/2 by letting them know that your site is available over an encrypted connection. Browsers will continue to show http in the address bar, not https.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "opportunistic_onion": {
+              "type": "string",
+              "description": "Onion Routing allows routing traffic from legitimate users on the Tor network through Cloudflare's onion services.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "privacy_pass": {
+              "type": "string",
+              "description": "Privacy Pass is a browser extension developed by the Privacy Pass Team to improve the browsing experience for your visitors.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "pseudo_ipv4": {
+              "type": "string",
+              "description": "Adds an IPv4 header to requests when a client is using IPv6, but the server only supports IPv4.",
+              "enum": ["off", "add_header", "overwrite_header"],
+              "default": "add_header"
+            },
+            "rocket_loader": {
+              "type": "string",
+              "description": "Improve the paint time for pages which include JavaScript.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "security_level": {
+              "type": "string",
+              "description": "Adjust your website's Security Level to determine which visitors will receive a challenge page.",
+              "enum": ["essentially_off", "low", "medium", "high", "under_attack"],
+              "default": "medium"
+            },
+            "ssl": {
+              "type": "string",
+              "description": "set the ssl level for the site in this zone.",
+              "enum": ["off", "flexible", "full", "strict", "origin_pull"],
+              "default": "off"
+            },
+            "tls_1_3": {
+              "type": "string",
+              "description": "Enable the latest version of the TLS protocol for improved security and performance.",
+              "enum": ["on", "off"],
+              "default": "on"
+            },
+            "websockets": {
+              "type": "string",
+              "description": "Allow WebSockets connections to your origin server.",
+              "enum": ["on", "off"],
+              "default": "on"
             }
           }
         }
