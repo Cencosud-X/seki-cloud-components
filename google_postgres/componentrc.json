@@ -2,6 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "Servidor de PostgreSQL",
   "kind": "google_postgres",
+  "owner": ["seki"],
+  "visibility": "internal",
   "tags": ["SQL", "Database", "beta"],
   "icons": {
     "light": "icons/icon-white.svg",

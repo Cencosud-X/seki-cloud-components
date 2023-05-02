@@ -2,6 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "Cloudflare Zone",
   "kind": "cloudflare_zone",
+  "owner": ["seki", "seki-ci"],
+  "visibility": "private",
   "tags": [
     "Security",
     "Cloudflare",
