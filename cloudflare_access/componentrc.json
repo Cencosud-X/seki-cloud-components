@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Cloudflare Access",
+  "kind": "cloudflare_access",
+  "owner": ["seki", "seki-ci"],
+  "visibility": "private",
+  "tags": [
+    "Security",
+    "Cloudflare",
+    "Zero Trust",
+    "Access",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Cloudflare Access de Zero Trust",
+    "en": "Zero Trust Cloudflare Access"
+  },
+  "descriptions": {
+    "es": "Marco de seguridad que se enfoca en proteger el acceso a los recursos de la red, mediante la autenticación segura y verificación de identidad para cada acceso, independientemente de su ubicación o entorno, con el fin de garantizar que solo los usuarios y dispositivos autorizados puedan acceder a los recursos de la red.",
+    "en": "ecurity framework that focuses on protecting access to network resources through secure authentication and identity verification for each access, regardless of location or environment, in order to ensure that only authorized users and devices can access network resources."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}
