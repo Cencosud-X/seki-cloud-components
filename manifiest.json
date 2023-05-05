@@ -23,6 +23,7 @@
     "elastic/componentrc.json",
     "dataproc/componentrc.json",
     "vertex_ai/componentrc.json",
-    "cloudflare_zone/componentrc.json"
+    "cloudflare_zone/componentrc.json",
+    "cloudflare_access/componentrc.json"
   ]
 }
