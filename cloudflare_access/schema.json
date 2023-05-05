@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type": "object",
+          "description": "Cloudflare Access Configuration",
+          "required": [
+            "cloudflare_zone_id"
+          ],
+          "cloudflare_zone_id": {
+            "type": "string",
+            "description": "The Zone ID"
+          },
+          "records": {
+            "type": "array",
+            "description": "Setup the cloudflare access policy",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "domain",
+                "value",
+                "proxied",
+                "type",
+                "path",
+                "decision"
+              ],
+              "allOf": [
+                {
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "Name of the subdomain or cname to be created."
+                    },
+                    "domain": {
+                      "type": "string",
+                      "description": "Domain name zone"
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "It could be a CNAME name or IP in the case of subdomains."
+                    },
+                    "proxied": {
+                      "type": "bool",
+                      "description": "If is or not proxied by cloudflare, it is usually proxied."
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "CNAME or A record type.",
+                      "enum": [
+                        "A",
+                        "CNAME"
+                      ]
+                    },
+                    "path": {
+                      "type": "string",
+                      "description": "Path to which the policy will be applied."
+                    },
+                    "decision": {
+                      "type": "string",
+                      "description": "Allow, block, bypass depending on the policy, usually it is allow."
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "access_allowed_cloudflare_group": {
+            "type": "array",
+            "description": "Group to which the permission is assigned.",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 2
+            },
+            "uniqueItems": true,
+            "enum": [
+              "f06da801-eabb-4138-8572-cf5452d2e2d7",
+              "51b18b0c-3fcc-44a4-8bd0-72d1a1e4d050"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}
