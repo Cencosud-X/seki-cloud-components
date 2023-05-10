@@ -29,8 +29,5 @@
     "source": "template"
   },
   "output": "settings.json",
-  "color": "#5584FF",
-  "stream": {
-    "uid": "0c56038ea2f4eded82e9f720e0bcd38e"
-  }
+  "color": "#5584FF"
 }
