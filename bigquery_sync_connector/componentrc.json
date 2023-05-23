@@ -6,7 +6,8 @@
   "visibility": "internal",
   "tags": [
     "Queue",
-    "Confluent"
+    "Confluent",
+    "experimental"
   ],
   "icons": {
     "light": "icons/icon-white.svg",
