@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
-  "name": "Big Query",
-  "kind": "bigquery",
+  "name": "Big Query Sink Connector",
+  "kind": "bigquery_sink_connector",
   "owner": ["seki"],
   "visibility": "internal",
   "tags": [
