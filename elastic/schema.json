@@ -11,6 +11,21 @@
               "type": "boolean",
               "description": "Enable kibana portal",
               "default": false
+            },
+            "template": {
+              "type": "string",
+              "description": "Deployment template identifier to create the deployment.",
+              "default": "gcp-compute-optimized"              
+            },
+            "max_size": {
+              "type": "string",
+              "description": "Maximum size value for the maximum autoscaling setting.",
+              "default": "16g"
+            },
+            "size_resource": {
+              "type": "string",
+              "description": "Size type.",
+              "default": "memory"
             },            
             "production": {
               "properties": {
