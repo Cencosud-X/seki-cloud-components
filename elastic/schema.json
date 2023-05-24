@@ -18,10 +18,16 @@
               "default": "gcp-compute-optimized",
               "enum": ["gcp-compute-optimized", "gcp-storage-optimized", "gcp-memory-optimized"]
             },
+            "min_size": {
+              "type": "string",
+              "description": "Minimum size value for the minimum autoscaling setting. 1g = memory, 8g = storage",
+              "default": "1g",
+              "enum": ["1g", "2g", "4g", "8g", "16g", "32g", "64g", "128g"]
+            },            
             "max_size": {
               "type": "string",
               "description": "Maximum size value for the maximum autoscaling setting.",
-              "default": "16g",
+              "default": "32g",
               "enum": ["8g", "16g", "32g", "64g", "128g"]
             },
             "size_resource": {
@@ -41,7 +47,25 @@
                   "type": "boolean",
                   "description": "Enable kibana portal",
                   "default": false
-                }                          
+                },
+                "min_size": {
+                  "type": "string",
+                  "description": "Minimum size value for the minimum autoscaling setting. 1g = memory, 8g = storage",
+                  "default": "1g",
+                  "enum": ["1g", "2g", "4g", "8g", "16g", "32g", "64g", "128g"]
+                },            
+                "max_size": {
+                  "type": "string",
+                  "description": "Maximum size value for the maximum autoscaling setting.",
+                  "default": "32g",
+                  "enum": ["8g", "16g", "32g", "64g", "128g"]
+                },
+                "size_resource": {
+                  "type": "string",
+                  "description": "Size type.",
+                  "default": "memory",
+                  "enum": ["memory", "storage"]
+                }
               }
             }
           }
