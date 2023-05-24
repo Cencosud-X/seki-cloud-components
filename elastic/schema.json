@@ -15,17 +15,20 @@
             "template": {
               "type": "string",
               "description": "Deployment template identifier to create the deployment.",
-              "default": "gcp-compute-optimized"              
+              "default": "gcp-compute-optimized",
+              "enum": ["gcp-compute-optimized", "gcp-storage-optimized", "gcp-memory-optimized"]
             },
             "max_size": {
               "type": "string",
               "description": "Maximum size value for the maximum autoscaling setting.",
-              "default": "16g"
+              "default": null,
+              "enum": ["8g", "16g", "32g", "64g", "128g"]
             },
             "size_resource": {
               "type": "string",
               "description": "Size type.",
-              "default": "memory"
+              "default": null,
+              "enum": ["memory", "storage"]
             },            
             "production": {
               "properties": {
