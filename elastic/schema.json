@@ -21,14 +21,14 @@
             "max_size": {
               "type": "string",
               "description": "Maximum size value for the maximum autoscaling setting.",
-              "default": "none",
-              "enum": ["none", "8g", "16g", "32g", "64g", "128g"]
+              "default": "16g",
+              "enum": ["8g", "16g", "32g", "64g", "128g"]
             },
             "size_resource": {
               "type": "string",
               "description": "Size type.",
-              "default": "none",
-              "enum": ["none", "memory", "storage"]
+              "default": "memory",
+              "enum": ["memory", "storage"]
             },            
             "production": {
               "properties": {
