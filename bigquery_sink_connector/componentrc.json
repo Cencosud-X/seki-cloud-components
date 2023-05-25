@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Big Query Sink Connector",
+  "kind": "bigquery_sink_connector",
+  "owner": ["seki"],
+  "visibility": "internal",
+  "tags": [
+    "Queue",
+    "Confluent",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Analítica avanzadaa",
+    "en": "advanced analitycs"
+  },
+  "descriptions": {
+    "es": "El Big Query Synk Connector de Kafka se utiliza para transmitir datos a las tablas de BigQuery.",
+    "en": "Long description...."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}

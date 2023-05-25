@@ -24,6 +24,7 @@
     "dataproc/componentrc.json",
     "vertex_ai/componentrc.json",
     "cloudflare_zone/componentrc.json",
-    "cloudflare_access/componentrc.json"
+    "cloudflare_access/componentrc.json",
+    "bigquery_sink_connector/componentrc.json"
   ]
 }

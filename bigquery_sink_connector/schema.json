@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type": "object",
+          "required": [
+            "dataset",
+            "topics"
+          ],
+          "description": "Kafka properties",
+          "properties": {
+            "dataset": {
+              "type": "string",
+              "description": "The dataset name"
+            },
+            "topics": {
+              "type": "array",
+              "description": "Setup the topics that we will create in Kafka",
+              "default": [
+                {
+                  "name": "two_letters_country.product.entity.state.v1"
+                }
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "pattern": "^[a-z]{2}\\.[a-z-_]+\\.[a-z-_]+\\.[a-z-_]+\\.v{1}\\d{1,2}$"
+                },
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}
