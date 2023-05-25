@@ -18,6 +18,11 @@
               "default": "gcp-compute-optimized",
               "enum": ["gcp-compute-optimized", "gcp-storage-optimized", "gcp-memory-optimized"]
             },
+            "autoscale": {
+              "type": "boolean",
+              "description": "Enable autoscaling",
+              "default": true
+            },
             "min_size": {
               "type": "string",
               "description": "Minimum size value for the minimum autoscaling setting. 1g = memory, 8g = storage",
@@ -47,6 +52,11 @@
                   "type": "boolean",
                   "description": "Enable kibana portal",
                   "default": false
+                },
+                "autoscale": {
+                  "type": "boolean",
+                  "description": "Enable autoscaling",
+                  "default": true
                 },
                 "min_size": {
                   "type": "string",
