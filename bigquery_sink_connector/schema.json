@@ -29,31 +29,31 @@
             "sanitize_topics": {
               "type": "boolean",
               "description": "Sanitize topic names",
-              "default": "true"
+              "default": "true",
               "enum": ["true", "false"]
             },
             "auto_update_schemas": {
               "type": "boolean",
               "description": "Whether to automatically update Big Query schemas",
-              "default": "true"
+              "default": "true",
               "enum": ["true", "false"]
             },
             "sanitize_field_names": {
               "type": "boolean",
               "description": "Whether to automatically field names",
-              "default": "true"
+              "default": "true",
               "enum": ["true", "false"]
             },
             "partitioning_type": {
               "type": "string",
               "description": "The time partitioning type to use when creating new tables",
-              "default": "INGESTION_TIME"
+              "default": "INGESTION_TIME",
               "enum": ["NONE", "INGESTION_TIME", "RECORD_TIME", "TIMESTAMP_COLUMN"]
             },
             "time_partitioning_type": {
               "type": "string",
               "description": "The time partitioning type to use when creating new tables",
-              "default": "DAY"
+              "default": "DAY",
               "enum": ["NONE", "DAY", "HOUR", "MONTH", "YEAR"]
             },
             "tasks_max": {
