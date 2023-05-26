@@ -6,15 +6,10 @@
         "properties": {
           "type": "object",
           "required": [
-            "dataset",
             "topics"
           ],
           "description": "Kafka properties",
           "properties": {
-            "dataset": {
-              "type": "string",
-              "description": "The dataset name"
-            },
             "input_key_format": {
               "type": "string",
               "description": "Input Kafka record key format",
