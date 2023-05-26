@@ -24,25 +24,25 @@
             "auto_create_tables": {
               "type": "boolean",
               "description": "Auto create tables on Big Query. Supports AVRO, JSON_SR or PROTOBUF",
-              "enum": ["true", "false"]
+              "enum": [true, false]
             },
             "sanitize_topics": {
               "type": "boolean",
               "description": "Sanitize topic names",
-              "default": "true",
-              "enum": ["true", "false"]
+              "default": true,
+              "enum": [true, false]
             },
             "auto_update_schemas": {
               "type": "boolean",
               "description": "Whether to automatically update Big Query schemas",
-              "default": "true",
-              "enum": ["true", "false"]
+              "default": true,
+              "enum": [true, false]
             },
             "sanitize_field_names": {
               "type": "boolean",
               "description": "Whether to automatically field names",
-              "default": "true",
-              "enum": ["true", "false"]
+              "default": true,
+              "enum": [true, false]
             },
             "partitioning_type": {
               "type": "string",
