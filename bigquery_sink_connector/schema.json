@@ -65,16 +65,8 @@
               "type": "array",
               "description": "Setup the topics that we will create in Kafka",
               "default": [
-                {
-                  "name": "two_letters_country.product.entity.state.v1"
-                }
-              ],
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "pattern": "^[a-z]{2}\\.[a-z-_]+\\.[a-z-_]+\\.[a-z-_]+\\.v{1}\\d{1,2}$"
-                }
-              }
+                  "two_letters_country.product.entity.state.v1"
+              ]
             }
           }
         }
