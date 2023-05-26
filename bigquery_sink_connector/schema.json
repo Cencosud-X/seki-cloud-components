@@ -15,6 +15,52 @@
               "type": "string",
               "description": "The dataset name"
             },
+            "input_key_format": {
+              "type": "string",
+              "description": "Input Kafka record key format",
+              "default": "AVRO",
+              "enum": ["AVRO", "BYTES", "JSON", "JSON_SR", "PROTOBUF", "STRING"]
+            },
+            "auto_create_tables": {
+              "type": "boolean",
+              "description": "Auto create tables on Big Query. Supports AVRO, JSON_SR or PROTOBUF",
+              "enum": ["true", "false"]
+            },
+            "sanitize_topics": {
+              "type": "boolean",
+              "description": "Sanitize topic names",
+              "default": "true"
+              "enum": ["true", "false"]
+            },
+            "auto_update_schemas": {
+              "type": "boolean",
+              "description": "Whether to automatically update Big Query schemas",
+              "default": "true"
+              "enum": ["true", "false"]
+            },
+            "sanitize_field_names": {
+              "type": "boolean",
+              "description": "Whether to automatically field names",
+              "default": "true"
+              "enum": ["true", "false"]
+            },
+            "partitioning_type": {
+              "type": "string",
+              "description": "The time partitioning type to use when creating new tables",
+              "default": "INGESTION_TIME"
+              "enum": ["NONE", "INGESTION_TIME", "RECORD_TIME", "TIMESTAMP_COLUMN"]
+            },
+            "time_partitioning_type": {
+              "type": "string",
+              "description": "The time partitioning type to use when creating new tables",
+              "default": "DAY"
+              "enum": ["NONE", "DAY", "HOUR", "MONTH", "YEAR"]
+            },
+            "tasks_max": {
+              "type": "string",
+              "description": "Maximum number of tasks for the connector",
+              "default": "1"
+            },   
             "topics": {
               "type": "array",
               "description": "Setup the topics that we will create in Kafka",
