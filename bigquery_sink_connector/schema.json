@@ -52,9 +52,9 @@
               "enum": ["NONE", "DAY", "HOUR", "MONTH", "YEAR"]
             },
             "tasks_max": {
-              "type": "string",
+              "type": "number",
               "description": "Maximum number of tasks for the connector",
-              "default": "1"
+              "default": 1
             },   
             "topics": {
               "type": "array",
