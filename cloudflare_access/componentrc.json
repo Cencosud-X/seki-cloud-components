@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "Cloudflare Access",
   "kind": "cloudflare_access",
-  "owner": ["seki", "seki-ci, seki-security"],
+  "owner": ["seki", "seki-ci", "seki-security"],
   "visibility": "private",
   "tags": [
     "Security",
