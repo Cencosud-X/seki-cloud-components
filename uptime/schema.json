@@ -73,15 +73,21 @@
                           },
                           "cache_busting_query_param_name": {
                             "type": "string",
-                            "description": "The name of the query parameter used to prevent the server from using a cached response. Each probe will assign a random value to this parameter each time a request is made."
-                          }, 
+                            "description": "(Optional) The name of the query parameter used to prevent the server from using a cached response. Each probe will assign a random value to this parameter each time a request is made."
+                          },
                           "fail_if_body_matches_regexp": {
-                            "type": "string",
-                            "description": "List of regexes. If any match the response body, the check will fail."
+                            "type": "array",
+                            "description": "(Optional) List of regexes. If any match the response body, the check will fail.",
+                            "default": [
+                              ""
+                            ]
                           },
                           "fail_if_body_not_matches_regexp": {
-                            "type": "string",
-                            "description": "List of regexes. If any do not match the response body, the check will fail."
+                            "type": "array",
+                            "description": "(Optional) List of regexes. If any do not match the response body, the check will fail.",
+                            "default": [
+                              ""
+                            ]
                           },
                           "fail_if_header_matches_regexp": {
                             "type": "object",
@@ -113,15 +119,18 @@
                           },
                           "fail_if_not_ssl": {
                             "type": "boolean",
-                            "description": "Fail if SSL is not present. Defaults to false."
+                            "description": "(Optional) Fail if SSL is not present. Defaults to false."
                           }, 
                           "fail_if_ssl": {
                             "type": "boolean",
-                            "description": "Fail if SSL is present. Defaults to false."
+                            "description": "(Optional) Fail if SSL is present. Defaults to false."
                           },
                           "headers": {
-                            "type": "string",
-                            "description": "The HTTP headers set for the probe."
+                            "type": "array",
+                            "description": "(Optional) The HTTP headers set for the probe.",
+                            "default": [
+                              ""
+                            ]
                           },
                           "ip_version": {
                             "type": "string",
@@ -166,12 +175,20 @@
                             }
                           },
                           "valid_http_versions": {
-                            "type": "string",
-                            "description": "List of valid HTTP versions. Options include HTTP/1.0, HTTP/1.1, HTTP/2"
+                            "type": "array",
+                            "description": "List of valid HTTP versions. Options include HTTP/1.0, HTTP/1.1, HTTP/2",
+                            "default": [
+                              "HTTP/1.0",
+                              "HTTP/1.1",
+                              "HTTP/2"
+                            ]
                           },
                           "valid_status_codes": {
-                            "type": "string",
-                            "description": "Accepted status codes. If unset, defaults to 2xx."
+                            "type": "array",
+                            "description": "Accepted status codes. If unset, defaults to 2xx.",
+                            "default": [
+                              "200"
+                            ]
                           }
                         }
                       }
