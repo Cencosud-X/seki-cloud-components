@@ -1,0 +1,5 @@
+{
+  "projectId": "local",
+  "dataset": "dev",
+  "apiEndpoint": "http://localhost:9050"
+}
