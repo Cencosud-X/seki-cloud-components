@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Uptime",
+  "kind": "uptime",
+  "owner": ["seki"],
+  "visibility": "internal",
+  "tags": [
+    "Monitoring",
+    "Observability",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Monitoreo sintético",
+    "en": "Synthetic monitoring"
+  },
+  "descriptions": {
+    "es": "El monitoreo sintético es un método para monitorear tus aplicaciones mediante la simulación de usuarios, dirigiendo la ruta tomada a través de la aplicación.",
+    "en": "Synthetic monitoring is a method to monitor your applications by simulating users – directing the path taken through the application."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}

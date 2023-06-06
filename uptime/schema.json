@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type": "object",
+          "description": "Uptime properties",
+          "required": [
+            "jobs"
+          ],
+          "properties": {
+            "jobs": {
+              "type": "array",
+              "description": "List of jobs",
+              "default": [
+                {
+                  "job": "letters_without_dot",
+                  "enabled": "true",
+                  "url": "http://domain.com",
+                  "http": {}
+                }
+              ],
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "job",
+                  "enabled",
+                  "url",
+                  "http"
+                ],
+                "allOf": [
+                  {
+                    "properties": {
+                      "job": {
+                        "type": "string",
+                        "description": "(Required) Name used for job label."
+                      },
+                      "enabled": {
+                        "type": "boolean",
+                        "description": "(Required) Enable monitoring."
+                      },
+                      "url": {
+                        "type": "string",
+                        "description": "(Required) Hostname to ping."
+                      },                          
+                      "http": {
+                        "type": "object",
+                        "description": "(Required) Settings for HTTP check.",
+                        "properties": {
+                          "basic_auth": {
+                            "type": "object",
+                            "description": "(Optional) Basic auth settings.",
+                            "properties": {
+                              "username": {
+                                "type": "string",
+                                "description": ""
+                              },
+                              "password": {
+                                "type": "string",
+                                "description": ""
+                              }
+                            }
+                          },
+                          "baere_token": {
+                            "type": "string",
+                            "description": "Token for use with bearer authorization header."
+                          },
+                          "body": {
+                            "type": "string",
+                            "description": "The body of the HTTP request used in probe."
+                          },
+                          "cache_busting_query_param_name": {
+                            "type": "string",
+                            "description": "The name of the query parameter used to prevent the server from using a cached response. Each probe will assign a random value to this parameter each time a request is made."
+                          }, 
+                          "fail_if_body_matches_regexp": {
+                            "type": "string",
+                            "description": "List of regexes. If any match the response body, the check will fail."
+                          },
+                          "fail_if_body_not_matches_regexp": {
+                            "type": "string",
+                            "description": "List of regexes. If any do not match the response body, the check will fail."
+                          },
+                          "fail_if_header_matches_regexp": {
+                            "type": "object",
+                            "description": "(Optional) Check fails if headers match.",
+                            "properties": {
+                              "header": {
+                                "type": "string",
+                                "description": ""
+                              },
+                              "regexp": {
+                                "type": "string",
+                                "description": ""
+                              }
+                            }
+                          },
+                          "fail_if_header_not_matches_regexp": {
+                            "type": "object",
+                            "description": "(Optional) Check fails if headers do not match.",
+                            "properties": {
+                              "header": {
+                                "type": "string",
+                                "description": ""
+                              },
+                              "regexp": {
+                                "type": "string",
+                                "description": ""
+                              }
+                            }
+                          },
+                          "fail_if_not_ssl": {
+                            "type": "boolean",
+                            "description": "Fail if SSL is not present. Defaults to false."
+                          }, 
+                          "fail_if_ssl": {
+                            "type": "boolean",
+                            "description": "Fail if SSL is present. Defaults to false."
+                          },
+                          "headers": {
+                            "type": "string",
+                            "description": "The HTTP headers set for the probe."
+                          },
+                          "ip_version": {
+                            "type": "string",
+                            "description": "Options are V4, V6, Any. Specifies whether the corresponding check will be performed using IPv4 or IPv6. The Any value indicates that IPv6 should be used, falling back to IPv4 if that's not available. Defaults to V4."
+                          },
+                          "method": {
+                            "type": "string",
+                            "description": "Request method. One of GET, CONNECT, DELETE, HEAD, OPTIONS, POST, PUT, TRACE Defaults to GET."
+                          },
+                          "no_follow_redirects": {
+                            "type": "boolean",
+                            "description": "Do not follow redirects. Defaults to false."
+                          },
+                          "proxy_url": {
+                            "type": "string",
+                            "description": "Proxy URL."
+                          },
+                          "tls_config": {
+                            "type": "object",
+                            "description": "(Optional) TLS config.",
+                            "properties": {
+                              "ca_cert": {
+                                "type": "string",
+                                "description": "CA certificate in PEM format."
+                              },
+                              "client_cert": {
+                                "type": "string",
+                                "description": "Client certificate in PEM format."
+                              },
+                              "client_key": {
+                                "type": "string",
+                                "description": "Client key in PEM format."
+                              },
+                              "insecure_skip_verify": {
+                                "type": "string",
+                                "description": "Disable target certificate validation. Defaults to false."
+                              },
+                              "server_name": {
+                                "type": "string",
+                                "description": "Used to verify the hostname for the targets."
+                              }
+                            }
+                          },
+                          "valid_http_versions": {
+                            "type": "string",
+                            "description": "List of valid HTTP versions. Options include HTTP/1.0, HTTP/1.1, HTTP/2"
+                          },
+                          "valid_status_codes": {
+                            "type": "string",
+                            "description": "Accepted status codes. If unset, defaults to 2xx."
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }           
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}
