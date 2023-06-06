@@ -16,7 +16,7 @@
               "default": [
                 {
                   "job": "letters_without_dot",
-                  "enabled": "true",
+                  "enabled": true,
                   "url": "http://domain.com",
                   "http": {}
                 }
@@ -63,7 +63,7 @@
                               }
                             }
                           },
-                          "baere_token": {
+                          "bearer_token": {
                             "type": "string",
                             "description": "Token for use with bearer authorization header."
                           },
