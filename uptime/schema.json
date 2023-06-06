@@ -17,6 +17,7 @@
                 {
                   "job": "letters_without_dot",
                   "enabled": true,
+                  "severety": "Critical",
                   "url": "http://domain.com",
                   "http": {}
                 }
@@ -27,6 +28,7 @@
                 "required": [
                   "job",
                   "enabled",
+                  "severety",
                   "url",
                   "http"
                 ],
@@ -40,6 +42,10 @@
                       "enabled": {
                         "type": "boolean",
                         "description": "(Required) Enable monitoring."
+                      },
+                      "severety": {
+                        "type": "string",
+                        "description": "(Required) Severety type."
                       },
                       "url": {
                         "type": "string",
