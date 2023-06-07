@@ -267,8 +267,11 @@
                   {
                     "properties": {
                       "email_addresses": {
-                        "type": "string",
-                        "description": "(Required) The addresses to send emails to."
+                        "type": "array",
+                        "description": "(Required) The addresses to send emails to.",
+                        "default": [
+                          "hola@domain"
+                        ]
                       },
                       "email_message": {
                         "type": "string",
