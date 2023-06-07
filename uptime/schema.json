@@ -183,11 +183,11 @@
                           },
                           "valid_http_versions": {
                             "type": "array",
-                            "description": "List of valid HTTP versions. Options include HTTP/1.0, HTTP/1.1, HTTP/2",
+                            "description": "List of valid HTTP versions. Options include HTTP/1.0, HTTP/1.1, HTTP/2.0",
                             "default": [
                               "HTTP/1.0",
                               "HTTP/1.1",
-                              "HTTP/2"
+                              "HTTP/2.0"
                             ]
                           },
                           "valid_status_codes": {
