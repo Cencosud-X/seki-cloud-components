@@ -283,11 +283,11 @@
                         "description": "The templated subject line of the email. Defaults to ``."
                       },
                       "email_single_email": {
-                        "type": "string",
+                        "type": "boolean",
                         "description": "Whether to send a single email CC'ing all addresses, rather than a separate email to each address. Defaults to false."
                       },
                       "email_disable_resolve_message": {
-                        "type": "string",
+                        "type": "boolean",
                         "description": "Whether to disable sending resolve messages. Defaults to false."
                       }
                     }
