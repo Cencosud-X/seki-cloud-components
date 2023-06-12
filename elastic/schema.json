@@ -6,6 +6,13 @@
         "properties": {
           "type": "object",
           "description": "Elastic properties",
+          "required": [
+            "template",
+            "autoscale",
+            "min_size",
+            "max_size",
+            "size_resource"
+          ],
           "properties": {
             "admin_viewer": {
               "type": "boolean",
