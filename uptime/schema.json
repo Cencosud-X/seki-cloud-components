@@ -43,7 +43,8 @@
                       },
                       "environment": {
                         "type": "string",
-                        "description": "(Required) Environment"
+                        "description": "(Required) Environment",
+                        "enum": ["staging", "production"]
                       },
                       "disable_alert": {
                         "type": "boolean",
