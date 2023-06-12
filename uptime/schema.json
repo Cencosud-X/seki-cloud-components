@@ -16,6 +16,7 @@
               "default": [
                 {
                   "job": "letters_without_dot",
+                  "environment": "staging",
                   "disable_alert": false,
                   "severety": "Critical",
                   "url": "http://domain.com",
@@ -27,6 +28,7 @@
                 "type": "object",
                 "required": [
                   "job",
+                  "environment",
                   "disable_alert",
                   "severety",
                   "url",
@@ -38,6 +40,10 @@
                       "job": {
                         "type": "string",
                         "description": "(Required) Name used for job label."
+                      },
+                      "environment": {
+                        "type": "string",
+                        "description": "(Required) Environment"
                       },
                       "disable_alert": {
                         "type": "boolean",
