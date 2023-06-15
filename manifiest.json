@@ -26,6 +26,7 @@
     "cloudflare_zone/componentrc.json",
     "cloudflare_access/componentrc.json",
     "bigquery_sink_connector/componentrc.json",
-    "uptime/componentrc.json"
+    "uptime/componentrc.json",
+    "github_orgs/componentrc.json"
   ]
 }
