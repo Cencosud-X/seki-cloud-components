@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Github",
+  "kind": "github",
+  "owner": ["seki"],
+  "visibility": "internal",
+  "tags": [
+    "Package"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Cuentas de organizaciones de Github",
+    "en": "Github organization accounts supported by seki"
+  },
+  "descriptions": {
+    "es": "GitHub es un servicio basado en la nube que aloja un sistema de control de versiones (VCS) llamado Git.",
+    "en": "GitHub is a cloud-based service that hosts a version control system (VCS) called Git."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}
