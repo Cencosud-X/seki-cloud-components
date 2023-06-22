@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Cloudflare Waf",
+  "kind": "cloudflare_waf",
+  "owner": ["seki", "seki-ci", "seki-security"],
+  "visibility": "private",
+  "tags": [
+    "Security",
+    "Cloudflare",
+    "Waf",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Cloudflare Waf",
+    "en": "Cloudflare Waf"
+  },
+  "descriptions": {
+    "es": "El firewall de aplicaciones web (WAF) de Cloudflarea detecta y mitiga las solicitudes maliciosas en todo el tráfico de las zonas administradas por seki",
+    "en": "Cloudflarea's Web Application Firewall (WAF) detects and mitigates malicious requests in all traffic from seki managed zones."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}
