@@ -1,0 +1,301 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "type": "object",
+    "allOf": [
+      {
+        "properties": {
+          "properties": {
+            "type": "object",
+            "description": "Cloudflare Access Configuration",
+            "required": [
+              "cloudflare_zone_id"
+            ],
+            "properties": {
+              "cloudflare_zone_id": {
+                "type": "string",
+                "description": "The Zone ID"
+              },
+              "owasp_rules": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "string",
+                      "description": "Perform the owasp rule group",
+                      "enum": [
+                        "execute"
+                      ]
+                    },
+                    "action_parameters": {
+                      "type": "object",
+                      "description": "Owasp rules group action parameters",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "description": "Id that identifies the owasp rule group."
+                        },
+                        "version": {
+                          "type": "string",
+                          "description": "owasp rule set version, default to use latest.",
+                          "enum": [
+                            "latest"
+                          ]
+                        },
+                        "overrides": {
+                          "type": "object",
+                          "description": "Allows to edit owasp group rules.",
+                          "properties": {
+                            "categories": {
+                              "type": "object",
+                              "properties": {
+                                "category": {
+                                  "type": "string",
+                                  "description": "Allows to define the paranoia level of the owasp rule group",
+                                  "enum": [
+                                    "paranoia-level-4",
+                                    "paranoia-level-3",
+                                    "paranoia-level-2",
+                                    "paranoia-level-1"
+                                  ]
+                                },
+                                "status": {
+                                  "type": "string",
+                                  "description": "Used to disable and set the paranoia level of the owasp rule group",
+                                  "enum": [
+                                    "enabled",
+                                    "disabled"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "category",
+                                "status"
+                              ]
+                            },
+                            "rules": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "description": "Owasp internal rule identifier"
+                                },
+                                "action": {
+                                  "type": "string",
+                                  "description": "Action the rule will take when detecting malicious traffic; log, block, allow, challenge",
+                                  "enum": [
+                                    "log",
+                                    "block",
+                                    "allow",
+                                    "challenge"
+                                  ]
+                                },
+                                "score_threshold": {
+                                  "type": "number",
+                                  "description": "OWASP Anomaly Score Threshold.",
+                                  "enum": [
+                                    25,
+                                    40,
+                                    60
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "action",
+                                "score_threshold"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "version",
+                        "overrides"
+                      ]
+                    },
+                    "expression": {
+                      "type": "boolean",
+                      "description": "Decision OWASP Managed Ruleset on my zone-level phase entry point ruleset.",
+                      "enum": [
+                        true,
+                        false
+                      ]
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "Execute OWASP Managed Ruleset on my zone-level phase entry point ruleset."
+                    },
+                    "enabled": {
+                      "type": "boolean",
+                      "description": "Enable or disable the owasp rule group",
+                      "enum": [
+                        true,
+                        false
+                      ]
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "action_parameters",
+                    "expression",
+                    "description",
+                    "enabled"
+                  ]
+                }
+              },
+              "managed_rules": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "string",
+                      "description": "Perform the owasp rule group",
+                      "enum": [
+                        "execute"
+                      ]
+                    },
+                    "action_parameters": {
+                      "type": "object",
+                      "description": "Cloudflare managed rules group action parameters",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "description": "Id that identifies the cloudflare managed rule group."
+                        },
+                        "version": {
+                          "type": "string",
+                          "description": "owasp rule set version, default to use latest.",
+                          "enum": [
+                            "latest"
+                          ]
+                        },
+                        "overrides": {
+                          "type": "object",
+                          "description": "Allows to edit cloudflare managed group rules.",
+                          "properties": {
+                            "action": {
+                              "type": "string",
+                              "description": "Action the rule will take when detecting malicious traffic; log, block, allow, challenge",
+                              "enum": [
+                                "log",
+                                "block",
+                                "allow",
+                                "challenge"
+                              ]
+                            },
+                            "status": {
+                              "type": "string",
+                              "description": "Enable or disable rules managed by cloudflare",
+                              "emun": [
+                                "enabled",
+                                "disabled"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "action",
+                            "status"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "version",
+                        "overrides"
+                      ]
+                    },
+                    "expression": {
+                      "type": "boolean",
+                      "description": "Decision OWASP Managed Ruleset on my zone-level phase entry point ruleset.",
+                      "enum": [
+                        true,
+                        false
+                      ]
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "Execute OWASP Managed Ruleset on my zone-level phase entry point ruleset."
+                    },
+                    "enabled": {
+                      "type": "boolean",
+                      "description": "Enable or disable the owasp rule group",
+                      "enum": [
+                        true,
+                        false
+                      ]
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "action_parameters",
+                    "expression",
+                    "description",
+                    "enabled"
+                  ]
+                }
+              },
+              "exceptions_rules": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "string",
+                      "description": "Skip certain rules, both owasp and cloudflare. This option should be used with caution and should only be applied to rules that generate blocks on false positives.",
+                      "enum": [
+                        "skip"
+                      ]
+                    },
+                    "action_parameters": {
+                      "type": "object",
+                      "description": "Cloudflare managed rules group action parameters",
+                      "properties": {
+                        "id_value": {
+                          "type": "string",
+                          "description": "Rule group id, could be Cloudflare rule group, OWASP rule group or credential leak."
+                        },
+                        "value": {
+                          "type": "string",
+                          "description": "It is the id of the rules that could be generating the false positive for a traffic."
+                        }
+                      },
+                      "required": [
+                        "id_value",
+                        "value"
+                      ]
+                    },
+                    "expression": {
+                      "type": "string",
+                      "description": "Is the expression to apply the rule. Expressions can be applied many variants."
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "Description for the configured rule. It is a unique value for each rule."
+                    },
+                    "enabled": {
+                      "type": "boolean",
+                      "description": "allow to activate the rule to do the skip."
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "action_parameters",
+                    "expression",
+                    "description",
+                    "enabled"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+      }
+    ]
+  }
+  
