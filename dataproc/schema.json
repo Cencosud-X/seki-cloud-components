@@ -82,7 +82,54 @@
                       "initialization_timeout_sec": {
                         "type": "number",
                         "description": "The maximum time in seconds"
-                      }                      
+                      },
+                      "shielded_instance_config": {
+                        "type": "object",
+                        "description": "(Optional) A set of Shielded Instance options. Check [Images using supported Shielded VM features] Not all combinations are valid",
+                        "properties": {
+                          "enable_integrity_monitoring": {
+                            "type": "boolean",
+                            "description": "(Optional) Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default."
+                          },
+                          "enable_secure_boot": {
+                            "type": "boolean",
+                            "description": "(Optional) Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails. Disabled by default."
+                          },
+                          "enable_vtpm": {
+                            "type": "boolean",
+                            "description": "(Optional) Defines whether the instance has the vTPM enabled. Enabled by default."
+                          }
+                        }
+                      },
+                      "software_config": {
+                        "type": "object",
+                        "description": "(Optional) A set of Shielded Instance options. Check [Images using supported Shielded VM features] Not all combinations are valid",
+                        "properties": {
+                          "image_version": {
+                            "type": "string",
+                            "description": "(Optional, Computed) The Cloud Dataproc image version to use for the cluster - this controls the sets of software versions installed onto the nodes when you create clusters. If not specified, defaults to the latest version."
+                          },
+                          "override_properties": {
+                            "description": "(Optional) Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails. Disabled by default.",
+                            "type": "object",
+                            "properties": {
+                              "map": {
+                                "type": "object",
+                                "additionalProperties": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "optional_components": {
+                            "type": "array",
+                            "description": "(Optional) The set of optional components to activate on the cluster. ",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 ]
