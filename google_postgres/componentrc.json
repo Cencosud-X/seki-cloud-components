@@ -4,7 +4,7 @@
   "kind": "google_postgres",
   "owner": ["seki"],
   "visibility": "internal",
-  "tags": ["SQL", "Database", "beta"],
+  "tags": ["SQL", "Database"],
   "icons": {
     "light": "icons/icon-white.svg",
     "dark": "icons/icon.svg"

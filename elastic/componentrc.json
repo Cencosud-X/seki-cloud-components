@@ -6,8 +6,7 @@
   "visibility": "internal",
   "tags": [
     "Search",
-    "Database",
-    "experimental"
+    "Database"
   ],
   "icons": {
     "light": "icons/icon-white.svg",

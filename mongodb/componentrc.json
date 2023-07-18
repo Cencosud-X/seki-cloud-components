@@ -4,7 +4,7 @@
   "kind": "mongodb",
   "owner": ["seki"],
   "visibility": "internal",
-  "tags": ["NoSQL", "Database", "beta"],
+  "tags": ["NoSQL", "Database"],
   "icons": {
     "light": "icons/icon-white.svg",
     "dark": "icons/icon.svg"
