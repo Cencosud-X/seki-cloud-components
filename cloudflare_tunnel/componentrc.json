@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Cloudflare Tunnel",
+  "kind": "cloudflare_tunnel",
+  "owner": ["seki", "seki-ci", "seki-security"],
+  "visibility": "private",
+  "tags": [
+    "Security",
+    "Cloudflare",
+    "Zero Trust",
+    "Tunnel",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Cloudflare Tunnel de Zero Trust",
+    "en": "Zero Trust Cloudflare Tunnel"
+  },
+  "descriptions": {
+    "es": "Herramienta de seguridad que permite proteger y asegurar el tráfico entre tu servidor web y Cloudflare. Utiliza una conexión segura y cifrada para mantener tu servidor detrás de un firewall o NAT, mejorando la seguridad y reduciendo la exposición a amenazas en línea.",
+    "en": "Allows you to protect and secure the traffic between your web server and Cloudflare. It uses a secure and encrypted connection to keep your server behind a firewall or NAT, enhancing security and reducing exposure to online threats."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js",
+    "post": "scripts/post.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}

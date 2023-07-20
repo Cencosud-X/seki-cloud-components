@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type": "object",
+          "description": "Cloudflare Tunnel Configuration",
+          "required": [
+            "cloudflare_account_id"
+          ],
+          "properties": {
+            "cloudflare_account_id": {
+              "type": "string",
+              "description": "The Account ID"
+            },
+            "tunnel_name": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the tunnel in Cloudflare"
+                  },
+                  "deployment_name": {
+                    "type": "string",
+                    "description": "Name of the deployment that will run in the cluster. This, will contain the clodufalred client."
+                  },
+                  "gke_nodepool": {
+                    "type": "string",
+                    "description": "You must specify the node where the Cloudflared client deployment will run."
+                  }
+                },
+                "required": [
+                  "name",
+                  "deployment_name",
+                  "gke_nodepool"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}
