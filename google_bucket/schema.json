@@ -18,6 +18,11 @@
               "type": "boolean",
               "default": false,
               "description": "Versioning of files"
+            },
+            "exists": {
+              "type": "boolean",
+              "default": false,
+              "description": "If the bucket exists(e.g. it was created by another product)"
             }
           }
         }
