@@ -43,7 +43,7 @@
                 "properties": {
                   "memory_size_gb": {
                     "default": 5,
-                    "minimum": 1
+                    "minimum": 5
                   }
                 }
               }
