@@ -29,7 +29,7 @@
     "cloudflare_tunnel/componentrc.json",
     "bigquery_sink_connector/componentrc.json",
     "uptime/componentrc.json",
-    "github/componentrc.json",,
+    "github/componentrc.json",
     "Cencosud-xlabs/ci-test/tomato/componentrc.json"
   ]
 }
