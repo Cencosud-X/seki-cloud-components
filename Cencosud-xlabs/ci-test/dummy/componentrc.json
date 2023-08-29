@@ -5,7 +5,7 @@
   "owner": [
     "ci-test"
   ],
-  "visibility": "private",
+  "visibility": "internal",
   "tags": [
     "experimental"
   ],
