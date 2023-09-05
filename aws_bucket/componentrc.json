@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "AWS Bucket",
+  "kind": "aws_bucket",
+  "owner": ["seki"],
+  "visibility": "internal",
+  "tags": [
+    "Bucket",
+    "AWS",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Almacenamiento",
+    "en": "Storage"
+  },
+  "descriptions": {
+    "es": "Cloud Storage es un servicio para almacenar tus objetos en AWS Cloud. Un objeto es un dato inmutable que consta de un archivo de cualquier formato",
+    "en": "Long description...."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}
