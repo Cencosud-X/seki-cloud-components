@@ -70,7 +70,7 @@
                       "properties": {
                         "name": {
                           "type": "string",
-                          "pattern": "^[a-z]{2}\\.[a-z-_]+\\.[a-z-_]+\\.[a-z-_]+\\.v{1}\\d{1,2}$"
+                          "pattern": "^[a-z]{2}\\.[a-z-_0-9]+\\.[a-z-_]+\\.[a-z-_]+\\.v{1}\\d{1,2}$"
                         },
                         "partitions": {
                           "type": "number",
