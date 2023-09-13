@@ -30,6 +30,7 @@
     "bigquery_sink_connector/componentrc.json",
     "uptime/componentrc.json",
     "github/componentrc.json",
-    "aws_bucket/componentrc.json"
+    "aws_bucket/componentrc.json",
+    "demo/componentrc.json"
   ]
 }
