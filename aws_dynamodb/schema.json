@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type": "object",
+          "required": [
+            "table_name"
+          ],
+          "description": "Dynamo DB",
+          "properties": {
+            "table_name": {
+              "type": "string",
+              "description": "Name of the table that we will storage key / value item"
+            }
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ]
+}

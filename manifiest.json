@@ -31,6 +31,7 @@
     "uptime/componentrc.json",
     "github/componentrc.json",
     "aws_bucket/componentrc.json",
-    "demo/componentrc.json"
+    "demo/componentrc.json",
+    "aws_dynamodb/componentrc.json"
   ]
 }
