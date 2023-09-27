@@ -32,7 +32,6 @@
     "github/componentrc.json",
     "aws_bucket/componentrc.json",
     "demo/componentrc.json",
-    "aws_dynamodb/componentrc.json",
-    "fun/componentrc.json"
+    "aws_dynamodb/componentrc.json"
   ]
 }
