@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "Fun",
+  "kind": "fun",
+  "owner": ["bushido"],
+  "visibility": "internal",
+  "tags": [
+    "SQS",
+    "Queue",
+    "AWS",
+    "experimental"
+  ],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Cola de Mensajes",
+    "en": "Queue Message"
+  },
+  "descriptions": {
+    "es": "Es uno de los servicios ofrecidos por la infraestructura de AWS y se enfoca en el manejo de las colas de mensajes",
+    "en": "Long description...."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}
