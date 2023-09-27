@@ -1,12 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
-  "name": "Fun",
-  "kind": "fun",
+  "name": "AWS SQS FIFO QUEUE",
+  "kind": "aws_sqs",
   "owner": ["bushido"],
   "visibility": "internal",
   "tags": [
     "SQS",
     "Queue",
+    "FIFO",
     "AWS",
     "experimental"
   ],
@@ -15,8 +16,8 @@
     "dark": "icons/icon.svg"
   },
   "short_descriptions": {
-    "es": "Cola de Mensajes",
-    "en": "Queue Message"
+    "es": "Cola de Mensajes FIFO",
+    "en": "FIFO SQS Queue Message"
   },
   "descriptions": {
     "es": "Es uno de los servicios ofrecidos por la infraestructura de AWS y se enfoca en el manejo de las colas de mensajes",
