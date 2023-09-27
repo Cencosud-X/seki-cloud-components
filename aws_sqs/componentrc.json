@@ -3,7 +3,7 @@
   "name": "AWS SQS FIFO QUEUE",
   "kind": "fun",
   "owner": ["bushido"],
-  "visibility": "internal",
+  "visibility": "private",
   "tags": [
     "SQS",
     "Queue",
