@@ -2,8 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
   "name": "AWS Bucket",
   "kind": "aws_bucket",
-  "owner": ["seki"],
-  "visibility": "internal",
+  "owner": ["bushido"],
+  "visibility": "private",
   "tags": [
     "Bucket",
     "AWS",
