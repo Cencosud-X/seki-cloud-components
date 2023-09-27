@@ -3,7 +3,7 @@
   "name": "AWS Dynamo DB",
   "kind": "aws_dynamodb",
   "owner": ["bushido"],
-  "visibility": "private",
+  "visibility": "internal",
   "tags": [
     "Database",
     "Key Value Storage",

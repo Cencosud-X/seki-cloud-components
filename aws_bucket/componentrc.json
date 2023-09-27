@@ -3,7 +3,7 @@
   "name": "AWS Bucket",
   "kind": "aws_bucket",
   "owner": ["bushido"],
-  "visibility": "private",
+  "visibility": "internal",
   "tags": [
     "Bucket",
     "AWS",
