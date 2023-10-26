@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "allOf": [
+    {
+      "properties": {
+        "properties": {
+          "type":"object",
+          "description": "AWS RDS properties",
+          "required": ["name", "database_name", "master_user_name", "engine"],
+          "properties": {
+             "name": {
+              "type": "string",
+              "description": "Main database name"
+            },
+             "database_name": {
+              "type": "string",
+              "description": "Main database name"
+            },
+            "master_user_name": {
+              "type": "string",
+              "description": "Main database name"
+            },
+            "engine": {
+              "$ref": "#/definitions/engine"
+            },
+            "tier": {
+              "$ref": "#/definitions/tier"
+            },
+            "production": {
+              "properties": {
+                "tier": {
+                  "$ref": "#/definitions/tier"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+    }
+  ],
+  "definitions": {
+    "tier": {
+      "type": "string",
+      "enum": ["small", "medium", "large"],
+      "description": "Type size of database by ACUs  small: 0.5 - 1, medium: 1 - 4, large: 2 - 8",
+      "default": "small"
+    },
+    "engine": {
+      "type": "string",
+      "enum": ["postgresql", "mysql"],
+      "description": "Engine type for the database can be mysql or postgresql"
+    }
+  }
+}

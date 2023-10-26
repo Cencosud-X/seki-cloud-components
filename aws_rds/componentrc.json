@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+  "name": "AWS RDS",
+  "kind": "aws_rds",
+  "owner": ["bushido"],
+  "visibility": "internal",
+  "tags": ["AWS", "SQL", "Database", "experimental"],
+  "icons": {
+    "light": "icons/icon-white.svg",
+    "dark": "icons/icon.svg"
+  },
+  "short_descriptions": {
+    "es": "Almacenamiento",
+    "en": "Storage"
+  },
+  "descriptions": {
+    "es": "Base de datos relacional que se adapta automáticamente a la carga de trabajo sin necesidad de una capacidad predefinida, lo que lo hace altamente escalable y rentable.",
+    "en": "Relational database service that automatically scales with workload demands, eliminating the need for predefined capacity, making it highly scalable and cost-effective."
+  },
+  "scripts": {
+    "rollback": "scripts/rollback.js"
+  },
+  "interpolations": {
+    "source": "template"
+  },
+  "output": "settings.json"
+}
