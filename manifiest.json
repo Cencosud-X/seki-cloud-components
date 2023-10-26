@@ -33,6 +33,7 @@
     
     "aws_dynamodb/componentrc.json",
     "aws_sqs/componentrc.json",
-    "aws_bucket/componentrc.json"
+    "aws_bucket/componentrc.json",
+    "aws_rds/componentrc.json"
   ]
 }
