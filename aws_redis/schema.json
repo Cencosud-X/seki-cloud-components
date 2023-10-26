@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "allOf": [
+      {
+        "properties": {
+          "properties": {
+            "type": "object",
+            "required": [
+              "cluster_id"
+            ],
+            "description": "Data storage and caching service",
+            "properties": {
+              "cluster_id": {
+                "type": "string",
+                "description": "Cluster name"
+              }
+            }
+          }
+        }
+      },
+      {
+        "$ref": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/component.schema.json"
+      }
+    ]
+}
