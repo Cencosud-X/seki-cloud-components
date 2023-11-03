@@ -1,0 +1,31 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Cencosud-X/seki-schemas/main/v1/cloud/componentrc.schema.json",
+    "name": "AWS Redis",
+    "kind": "aws_redis",
+    "owner": ["bushido"],
+    "visibility": "internal",
+    "tags": [
+      "Redis",
+      "AWS",
+      "experimental"
+    ],
+    "icons": {
+      "light": "icons/icon-white.svg",
+      "dark": "icons/icon.svg"
+    },
+    "short_descriptions": {
+      "es": "Servicio de caché",
+      "en": "Caching service"
+    },
+    "descriptions": {
+      "es": "Servicio de caché gestionado para acelerar aplicaciones en AWS. Alta disponibilidad, escalabilidad y facilidad de uso",
+      "en": "Managed caching service to accelerate applications on AWS. High availability, scalability, and ease of use"
+    },
+    "scripts": {
+      "rollback": "scripts/rollback.js"
+    },
+    "interpolations": {
+      "source": "template"
+    },
+    "output": "settings.json"
+  }
