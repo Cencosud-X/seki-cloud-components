@@ -14,10 +14,10 @@
               "type": "string",
               "description": "SQS Queue name"
             },
-            "versioning": {
+            "fifo_queue": {
               "type": "boolean",
               "default": false,
-              "description": "Versioning of files"
+              "description": "Fifo Queue"
             },
             "exists": {
               "type": "boolean",
